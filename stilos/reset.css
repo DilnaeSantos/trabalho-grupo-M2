@@ -1,0 +1,6 @@
+/* definir estilos iniciais para todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
