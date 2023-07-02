@@ -5,88 +5,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./stilos/style.css">
-    <title>cadastro</title>
+    <title>Cadastro</title>
 </head>
 
-<!-- Essa vai ser a página home, página de apresentação da empresa -->
-
-<body class="inicio">
-    <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas de quem somos, nossa equipe, produtos e contato. -->
+<body>
     <header>
+        <a href="../index.html">LOGO</a>
         <nav>
-            <a href="index.html">
-                <h1>INDEFINIDO</h1>
-            </a>
-        </nav>
-        
-        <nav>
-            <a id="botoesHeader" href="detalhes.html">Produtos</a>
-            <a id="botoesHeader" href="contato.html">Contato</a>
-            <a id="botoesHeader" href="cadastro.html">Cadastrar</a>
-            <a id="botoesHeader" href="login.html">Login</a>
+            <a href="./login.html">Login</a>
+            <a href="./detalhes.html">Detalhes</a>
         </nav>
     </header>
 
-    <!-- /na main esta página tem apenas uma foto do logo da empresa. -->
-    <main class="mainIndex">
-        <h2>pagina de cadastro</h2>
+    <main>
+        <p>Pagina de cadastro</p>
 
         <form>
             <h3>Dados cadastrais</h3>
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" required value="Clotilde">
-            <br>
+
             <label for="email">E-mail:</label>
             <input type="email" name="email" id="email" required value="asdf@sda">
-            <br>
+            
             <label for="senha">Senha:</label>
             <input type="password" name="senha" id="senha" required value="123">
-            <br>
+            
             <label for="senhaConfirma">Confirme a senha:</label>
             <input type="password" name="senhaConfirma" id="senhaConfirma" required value="123">
-            <br>
+            
             <label for="rg">RG:</label>
             <input type="text" name="rg" id="rg" required value="12378946-6">
-            <br>
+            
 
             <h3>Endereço</h3>
             <label for="cep">CEP:</label>
             <input type="number" name="cep" id="cep" required>
-            <br>
+            
             <label for="estado">Estado:</label>
             <input type="text" name="estado" id="estado" disabled>
-            <br>
+            
             <label for="cidade">Cidade:</label>
             <input type="text" name="cidade" id="cidade" disabled>
-            <br>
+            
             <label for="bairro">Bairro:</label>
             <input type="text" name="bairro" id="bairro" disabled>
-            <br>
+            
             <label for="rua">Rua:</label>
             <input type="text" name="rua" id="rua" disabled>
-            <br>
+            
             <label for="numero">Número:</label>
             <input type="number" name="numero" id="numero" required value="71">
-            <br>
+            
             <label for="complemento">Complemento:</label>
             <input type="text" name="complemento" id="complemento">
-            <br>
-            <br>
+            
 
             <button type="submit">Cadastrar</button>
         </form>
     </main>
 
     <!-- Rodape com imagens de paginas de redes sociais -->
-    <footer class="rodapeIndex">
+    <!-- <footer class="rodapeIndex">
         <div class="blocoFooter">
             <img class="imagemFooter" src="./stilos/imagens/logotipo-do-instagram.png" alt="logoInstagram" />
             <img class="imagemFooter" src="./stilos/imagens/facebook.png" alt="logoFace" />
             <img class="imagemFooter" src="./stilos/imagens/whatsapp.png" alt="logoWhats" />
         </div>
         <p>Todos os direitos reservados.</p>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
