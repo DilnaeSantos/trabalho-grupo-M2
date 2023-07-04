@@ -27,38 +27,71 @@ header > nav{
 }
 
 /* --------------------------------------------------------------------- */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
 
 h1{
-    margin: 1rem 2rem;
+    margin: .5rem 2rem;
     color: #ccc;
+    width: 90%;
 }
 
-.dadosCadastraisIdentificacao, .dadosCadastraisEndereco{
-    margin: 1rem 2rem;
-    padding: .5rem 1rem;
-    background-color: #03a;
+form{
+    width: 90%;
+    margin: .5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.dadosCadastraisIdentificacao > h3, .dadosCadastraisEndereco > h3{
+form > h3{
     margin: .5rem 0;
-    padding: 0 1rem;
+    width: 100%;
     border-bottom: solid #3339;
 }
 
-/* .dadosCadastraisIdentificacao{
+.dadosIdentificacao{
+    padding: .5rem 1rem;
+    background-color: #03a;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 140px;
+    align-items: start;
     
-} */
+    
+}
+.dadosIdentificacao > input{
+    width: 45%;
+}
 
-/* .dadosCadastraisEndereco{
-    
-} */
+.dadosEndereco{
+    padding: .5rem 1rem;
+    background-color: #03a;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 180px;
+    align-items: start;
+}
+.dadosEndereco > input{
+    width: 45%;
+}
 
 /* --------------------------------------------------------------------- */
 
 .botaoCadastrar{
     background-color: #03a;
     color: #ccc;
-    margin: 1rem 2rem;
+    margin: .5rem 2rem;
     height: 2rem;
     width: 6rem;
     transition: .3s;
@@ -75,4 +108,14 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (min-width: 700px) { 
+    /* Telas maiores de 700px */
+    form{
+        width: 600px;
+    }
+    h1{
+        width: 600px;
+    }
 }
