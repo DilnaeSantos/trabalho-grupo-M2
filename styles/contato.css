@@ -1,0 +1,48 @@
+/* seletor universal para tá um reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002147;
+}
+
+/* eu optei de colocar a logo dentro de uma div pq a logo e uma imagem fazada e por isso não ia ficar legal colocar um background direto na imagem */
+.design-fundo-logo {
+    margin: 1%;
+    padding: 1%;
+    height: 7%;
+    width: 7%;
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* estilizando a logo do site */
+.img-logo {
+    margin: 1%;
+    height: 30%;
+    width: 60%;
+    border-radius: 0%;
+}
+
+.menu-navegacao {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin: 3%;
+}
+
+.link-pagina-inicial {
+    text-decoration: none;
+    color: white;
+    background-color: #0033AD;
+    font-size: 130%;
+    padding: 6%;
+    border-radius: 40%;
+}
