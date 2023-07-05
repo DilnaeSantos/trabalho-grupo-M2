@@ -12,10 +12,17 @@
 </head>
 
 <body>
-    <header>
-        <a class="headerBotao" href="../index.html">LOGO</a>
-        <nav>
-            <a class="headerBotao" href="./login.html">Login</a>
+    <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas de quem somos, nossa equipe, produtos e contato. -->
+
+    <header class="cabecalho">
+        <div class="designFundoLogo">
+            <a href="index.html" class="linkLogoCorvo"><img src="./styles/imagens/logo-corvo.png" alt="logoCorvo"
+                    class="imgLogo"></a>
+        </div>
+        <h1>MUNIN LÆRETID</h1>
+        <nav class="menuNavegacao">
+            <a href="./html/cadastro.html" class="linkPaginaInicial">Cadastro</a>
+            <a href="./html/login.html" class="linkPaginaInicial">Login</a>
         </nav>
     </header>
 
@@ -85,12 +92,8 @@
 
     <!-- Rodape com imagens de paginas de redes sociais -->
     <footer>
-        <p>Todos os direitos reservados.</p>
-        <div class="blocoFooter">
-            <img class="imagemFooter" src="../img/logotipo-do-instagram.png" alt="logoInstagram" />
-            <img class="imagemFooter" src="../img/facebook.png" alt="logoFace" />
-            <img class="imagemFooter" src="../img/whatsapp.png" alt="logoWhats" />
-        </div>
+        <img src="./styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
+        <p class="textoDoRodape">&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
