@@ -1,0 +1,129 @@
+body{
+    background-color: #000;
+    color: #ccc;
+}
+
+/* --------------------------------------------------------------------- */
+
+header{
+    background-color: #333;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+header > nav{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.headerBotao{
+    margin: 0 5%;
+    padding: .5rem 1rem;
+    background-color: #0033ad;
+    color: #ccc;
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------- */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+h1{
+    margin: .5rem 2rem;
+    color: #ccc;
+    width: 90%;
+}
+
+form{
+    width: 90%;
+    margin: .5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form > h3{
+    margin: .5rem 0;
+    width: 100%;
+    border-bottom: solid #3339;
+}
+
+.dadosIdentificacao, .dadosEndereco{
+    padding: .5rem 1rem;
+    background-color: #03a;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+}
+.dadosIdentificacao{
+    height: 190px;
+}
+
+.dadosEndereco{
+    height: 240px;
+}
+
+
+.dadosIdentificacao > fieldset{
+    padding: .5rem;
+    background-color: #03a;
+    border: none;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.dadosEndereco > fieldset{
+    padding: .5rem;
+    background-color: #03a;
+    border: none;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------- */
+
+.botaoCadastrar{
+    background-color: #03a;
+    color: #ccc;
+    margin: .5rem 2rem;
+    height: 2rem;
+    width: 6rem;
+    transition: .3s;
+}
+.botaoCadastrar:hover{
+    background-color: #03a5;
+}
+
+/* --------------------------------------------------------------------- */
+
+footer{
+    background-color: #333;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 700px) { 
+    /* Telas maiores de 700px */
+    form{
+        width: 600px;
+    }
+    h1{
+        width: 600px;
+    }
+}
