@@ -98,4 +98,24 @@ p {
     margin-top: 2%;
 }
 
+button {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 400px;
+    height: 100px;
+}
+
+
+.modulo1, .modulo2, .modulo3, .modulo4, .modulo5 {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 68%;
+    position: absolute;
+    margin-top: 2%;
+}
+
 
