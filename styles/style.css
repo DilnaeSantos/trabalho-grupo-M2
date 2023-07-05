@@ -1,81 +1,53 @@
 @import"./reset.css";
 
-/* estilizaçao para ficar responsivo */
-@media(max-width: 100px) {
-    header {
-        width: 100px;
-    }
-}
-
-body{
-    background-color: rgb(143, 97, 36);
-}
-
-header {
-
-    justify-content: center;
-    min-height: 100px;
-    display: flex;
-    justify-content: space-around;
-    background-color: #a8da20;
-}
-
-/* Alinhamento do conteudo dos navegadores e seu tamanho.  */
-nav {
-    margin-bottom: 20px;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-
-/* Estilização de tamanhos e cores das palavras que são os botões.  */
-a {
-    color: #ec660c;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    height: 70px;
-}
-
-/* Definição de posição e cor do rodapé. */
-footer {
+.cabecalho {
     display: flex;
     justify-content: space-between;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #dfdc42;
-    padding: 5px;
-    
+    align-items: center;
+    background-color: #002147;
 }
 
-.blocoFooter{
-    /* background-color: aliceblue; */
+/* eu optei de colocar a logo dentro de uma div pq a logo e uma imagem fazada e por isso não ia ficar legal colocar um background direto na imagem */
+.designFundoLogo {
+    margin: 1%;
+    padding: 1%;
+    height: 5%;
+    width: 5%;
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* estilizando a logo do site */
+.imgLogo {
+    margin: 1%;
+    height: 30%;
+    width: 60%;
+    border-radius: 0%;
+}
+
+.menuNavegacao {
     display: flex;
-    justify-content: space-around;
-    padding-left: 15px;
-    gap: 100px;
+    justify-content: center;
+    width: 7%;
+    margin: 2%;
+    margin-right: 7%;
 }
 
-/* Rodapé da pagina inicial fixada no final da tela.  */
-.rodapeIndex {
-    position: fixed;
-    padding: 5px;
+.linkPaginaInicial {
+    text-decoration: none;
+    color: white;
+    background-color: #0033AD;
+    font-size: 90%;
+    padding: 8%;
+    border-radius: 30%;
+    transition: 0.2s;
 }
 
-
-/* Alinhamento do texto e cor dentro do rodapé.  */
-p {
-    padding-right: 15px;
-    color: #00000099;
+.linkPaginaInicial:hover {
+    transform: scale(1.2);
 }
 
-/* Quando passar com mouse por cima dos botões das redes socias no footer, a imagem aumenta um pouco sinalizando que se clicado vai ser redirecionado para outra página.  */
-.imagemFooter:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
+h1 {
+    color: white;
 }
