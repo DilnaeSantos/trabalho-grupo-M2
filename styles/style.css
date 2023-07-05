@@ -18,6 +18,10 @@
     text-align: center;
 }
 
+.designFundoLogo:hover {
+    transform: scale(1.2);
+}
+
 /* estilizando a logo do site */
 .imgLogo {
     margin: 1%;
@@ -35,6 +39,7 @@
 }
 
 .linkPaginaInicial {
+    margin-right: 6%;
     text-decoration: none;
     color: white;
     background-color: #0033AD;
@@ -50,4 +55,25 @@
 
 h1 {
     color: white;
+}
+
+/* estilizando o footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #002147;
+}
+
+.imgBandeira {
+    margin: 0.7%;
+    margin-right: 2%;
+    height: 3%;
+    width: 3%;
+}
+
+.textoDoRodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 37%;
 }
