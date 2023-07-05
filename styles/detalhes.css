@@ -1,0 +1,103 @@
+
+
+body{
+    background-color: black;
+}
+header{
+    display: flex;
+    background-color: silver;
+}
+.imgETextoInicial{
+    margin-left: 50px;
+}
+h2{
+    padding: 40px;
+    color: white;
+}
+p, h3{
+    color: white;
+}
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+div{
+    border-radius: 15%;
+    text-align: center;
+}
+
+.imgETextoInicial{
+    display: flex;
+    gap: 10px
+}
+.textoApresentacao{
+    font-size: 25px;
+    color: white;
+    text-align: initial;
+    padding: 150px;
+}
+.textoDePromocao{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: justify;
+    margin: 100px;
+}
+.anuncioPromo{
+    font-size: 25px;
+}
+.promocao{
+    text-align: center;
+    font-size: 40px;
+}
+.planos{
+    padding: 40px;
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    background-color: rgb(58, 75, 75);
+    
+}
+.conteudoPlanos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 300px;
+    text-align: start;
+}
+.preco{
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15%;
+    background-color: rgb(85, 94, 94);
+    padding: 30px;
+}
+.incluiPlano{
+    color: brown;
+}
+.botaoPreco{
+    color: brown;
+    border-radius: 8px;
+    background-image: linear-gradient(to bottom, #d35833, #c1eec1);
+}
+.botaoPreco:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.botaoPromocao{
+    margin-bottom: 50px;
+    height: 30px;
+    color: white;
+    border-radius: 8px;
+    background-color: rgb(84, 147, 116);
+}
+.botaoPromocao:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
