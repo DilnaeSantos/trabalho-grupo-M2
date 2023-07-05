@@ -1,33 +1,7 @@
-body{
+/* -------------------------------------- MAIN DO  CADASTRO */
+main{
     background-color: #000;
     color: #ccc;
-}
-
-/* --------------------------------------------------------------------- */
-
-header{
-    background-color: #333;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-}
-header > nav{
-    width: 30%;
-    display: flex;
-    justify-content: center;
-}
-.headerBotao{
-    margin: 0 5%;
-    padding: .5rem 1rem;
-    background-color: #0033ad;
-    color: #ccc;
-    text-decoration: none;
-}
-
-/* --------------------------------------------------------------------- */
-main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,13 +9,13 @@ main{
 
 }
 
-h1{
+main > h2{
     margin: .5rem 2rem;
     color: #ccc;
     width: 90%;
 }
 
-form{
+main > form{
     width: 90%;
     margin: .5rem 2rem;
     display: flex;
@@ -50,7 +24,7 @@ form{
     align-items: center;
 }
 
-form > h3{
+main > form > h3{
     margin: .5rem 0;
     width: 100%;
     border-bottom: solid #3339;
@@ -72,7 +46,6 @@ form > h3{
 .dadosEndereco{
     height: 240px;
 }
-
 
 .dadosIdentificacao > fieldset{
     padding: .5rem;
@@ -108,22 +81,15 @@ form > h3{
     background-color: #03a5;
 }
 
-/* --------------------------------------------------------------------- */
+/* -------------------------------------- RESPONSIVIDADE DO  CADASTRO */
 
-footer{
-    background-color: #333;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 @media (min-width: 700px) { 
     /* Telas maiores de 700px */
-    form{
+    main > form{
         width: 600px;
     }
-    h1{
+    main > h2{
         width: 600px;
     }
 }
