@@ -10,22 +10,21 @@
     <title>Login</title>
 </head>
 
-<!-- Essa vai ser a página home, página de apresentação da empresa -->
-<header class="cabecalho">
-    <div class="designFundoLogo">
-        <a href="index.html" class="linkLogoCorvo"><img src="./styles/imagens/logo-corvo.png" alt="logoCorvo"
-                class="imgLogo"></a>
-    </div>
-    <h1>MUNIN LÆRETID</h1>
-    <nav class="menuNavegacao">
-        <a href="./html/login.html" class="btn btn-outline-primary linkPaginaInicial">Login</a>
-    </nav>
-</header>
-
 <body class="inicio">
+    <!-- Essa vai ser a página home, página de apresentação da empresa -->
+    <header class="cabecalho">
+        <div class="designFundoLogo">
+            <a href="../index.html" class="linkLogoCorvo"><img src="./styles/imagens/logo-corvo.png" alt="logoCorvo"
+                    class="imgLogo"></a>
+        </div>
+        <h1>MUNIN LÆRETID</h1>
+        <nav class="menuNavegacao">
+            <a href="./cadastro.html" class="btn btn-outline-primary linkPaginaInicial">Cadastro</a>
+        </nav>
+    </header>
 
-    <div class="formcontainer">
-        <div class="form-login">
+    <main class="formcontainer">
+        <section class="form-login">
             <form class="form">
                 <label for="usuario">Usuário:</label>
                 <input type="text" id="usuario" name="usuario" required placeholder="Digite o nome do usuário">
@@ -36,16 +35,16 @@
                     <button id="submit" type="button">Login</button>
                 </div>
             </form>    
-        <p class="linkRecuperaSenha"><a href="../html/recuperaSenha.html">Esqueci minha senha.</a></p>
+            <p class="linkRecuperaSenha"><a href="../html/recuperaSenha.html">Esqueci minha senha.</a></p>
+        </section>
+    </main>        
 
-    </div>        
-<<<<<<< HEAD
-    <script src="../scripts/login.js"></script>
-=======
+    <!-- Rodape com imagens de paginas de redes sociais -->
     <footer>
-        <img src="./styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
+        <img src="../styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
         <p class="textoDoRodape">&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
     </footer>
->>>>>>> 3ccf37f3e5a1d48967d5ab9ceb11a58e97e9b427
+
+    <script src="../src/controllers/login.js"></script>
 </body>
 </html>
