@@ -2,9 +2,13 @@
 
 body{
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100Vh;
 }
 
 .formcontainer{
+    flex-grow: 1;
     display: flex;
     justify-content: center; /* Alinhar horizontalmente ao centro */
     align-items: center; /* Alinhar verticalmente ao centro */
