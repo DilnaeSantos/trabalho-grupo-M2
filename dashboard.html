@@ -10,18 +10,18 @@
     <style>
         header {
             background-color: #002147;
-        }
-
-        footer {
-            background-color: #002147;
+            width: 100%;
+            height: 60px;
         }
 
         .imagemFundo {
+            max-width:100%;
+	        height:auto;
             position: absolute;
             z-index: -1;
         }
 
-        .accordion {
+        #accordion {
             position: relative;
             z-index: 0;
             padding-top: 50px;
@@ -34,14 +34,49 @@
             display: flex;
             left: 0;
             bottom: 0;
-            margin-top: 68%;
+            margin-top: 35%;
+            padding-top: 12px;
             width: 100%;
             height: 20%;
             background-color: #002147 ;
             z-index: 1;
         }
 
+        nav {
+            display: flex;
+            flex-direction: row;
+            margin-left: 65%;
+            z-index: 1;
+            margin-top: -45px;
+        }
 
+        #button1 {
+            margin-right: 10px;
+            margin-bottom: 0px;
+            width: 90px;
+            height: auto;
+        }
+        
+        #button2, #button3, #button4 {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 0;
+            width: 90px;
+            height: auto;
+        }
+
+        .card1, .card2, .card3, .card4, .card5, .card6 {
+            background-color: black;
+            opacity: 0.4;
+        }
+
+        .card1 {
+            border-radius: 4px 4px 0px 0px;
+        }
+
+        .card6 {
+            border-radius: 0px 0px 4px 4px;
+        }
     </style>
 
     <title>Home</title>
@@ -59,76 +94,107 @@
                 <h1> ESCOLA DE ODIN </h1>
             </a>
         <nav>
-            <button type="button" class="btn btn-dark">Produtos</button>
-            <button type="button" class="btn btn-dark">Contato</button>
-            <button type="button" class="btn btn-dark">Cadastrar</button>
-            <button type="button" class="btn btn-dark">Login</button>
+            <button id="button1" type="button" class="btn btn-dark">Produtos</button>
+            <button id="button2" type="button" class="btn btn-dark">Contato</button>
+            <button id="button3" type="button" class="btn btn-dark">Cadastrar</button>
+            <button id="button4" type="button" class="btn btn-dark">Login</button>
         </nav>
 
     </header>
+
+
+<!-- Imagem de fundo -->
 
 <main>
     <div>
     <img class="imagemFundo" src="./stilos/imagens/auroraboreal.jpg">
     </div>
 
-<!-- Imagem de fundo -->
+<!-- Accordion com os módulos do curso -->
 
-<div class="accordion">
-
-    <div class="card">
+<div id="accordion">
+    <div class="card1">
         <div class="card-header">
-            <button class="btn btn-link">
+            <button class="btn btn-link" data-target="#collapse1" data-toggle="collapse">
                 Módulo 1
             </button>
         </div>
-        <collapse class="show">
-            <div class="card body"></div>
-        </collapse>
+        <div class="collapse" id="collapse1" data-parent="#accordion">
+            <div class="card-body">
+                <h3></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis laudantium vero vitae totam dolorum pariatur! Sed quasi voluptate rem consectetur iste! Iste minus voluptatibus perspiciatis repellendus iusto laboriosam placeat.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
+    <div class="card2">
         <div class="card-header">
-            <button class="btn btn-link">
+            <button class="btn btn-link" data-target="#collapse2" data-toggle="collapse">
                 Módulo 2
             </button>
         </div>
-        <collapse class="show">
-            <div class="card body"></div>
-        </collapse>
+        <div class="collapse" id="collapse2" data-parent="#accordion">
+            <div class="card-body">
+                <h3></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis laudantium vero vitae totam dolorum pariatur! Sed quasi voluptate rem consectetur iste! Iste minus voluptatibus perspiciatis repellendus iusto laboriosam placeat.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
+    <div class="card3">
         <div class="card-header">
-            <button class="btn btn-link">
+            <button class="btn btn-link" data-target="#collapse3" data-toggle="collapse">
                 Módulo 3
             </button>
         </div>
-        <collapse class="show">
-            <div class="card body"></div>
-        </collapse>
+        <div class="collapse" id="collapse3" data-parent="#accordion">
+            <div class="card-body">
+                <h3>Informação 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis laudantium vero vitae totam dolorum pariatur! Sed quasi voluptate rem consectetur iste! Iste minus voluptatibus perspiciatis repellendus iusto laboriosam placeat.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
+    <div class="card4">
         <div class="card-header">
-            <button class="btn btn-link">
+            <button class="btn btn-link" data-target="#collapse4" data-toggle="collapse">
                 Módulo 4
             </button>
         </div>
-        <collapse class="show">
-            <div class="card body"></div>
-        </collapse>
+        <div class="collapse" id="collapse4" data-parent="#accordion">
+            <div class="card-body">
+                <h3></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis laudantium vero vitae totam dolorum pariatur! Sed quasi voluptate rem consectetur iste! Iste minus voluptatibus perspiciatis repellendus iusto laboriosam placeat.</p>
+            </div>
+        </div>
     </div>
-    
-    <div class="card">
+
+    <div class="card5">
         <div class="card-header">
-            <button class="btn btn-link">
+            <button class="btn btn-link" data-target="#collapse5" data-toggle="collapse">
                 Módulo 5
             </button>
         </div>
-        <collapse class="show">
-            <div class="card body"></div>
-        </collapse>
+        <div class="collapse" id="collapse5" data-parent="#accordion">
+            <div class="card-body">
+                <h3>Informação 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis laudantium vero vitae totam dolorum pariatur! Sed quasi voluptate rem consectetur iste! Iste minus voluptatibus perspiciatis repellendus iusto laboriosam placeat.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card6">
+        <div class="card-header">
+            <button class="btn btn-link" data-target="#collapse6" data-toggle="collapse">
+                Módulo 6
+            </button>
+        </div>
+        <div class="collapse" id="collapse6" data-parent="#accordion">
+            <div class="card-body">
+                <h3>Informação 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis laudantium vero vitae totam dolorum pariatur! Sed quasi voluptate rem consectetur iste! Iste minus voluptatibus perspiciatis repellendus iusto laboriosam placeat.</p>
+            </div>
+        </div>
     </div>
 
 </div>
