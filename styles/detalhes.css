@@ -70,10 +70,10 @@ div{
     text-align: start;
 }
 .preco{
-    margin-right: 50px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     border-radius: 15%;
     background-color: rgb(85, 94, 94);
     padding: 30px;
