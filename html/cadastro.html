@@ -10,7 +10,6 @@
     
     <!-- BootStrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
     <script src="../scripts/cadastro.js" defer></script>
     <title>Cadastro</title>
 </head>
@@ -29,65 +28,35 @@
     </header>
 
     <!-- Parte principal da página de cadastro -->
-    <main class="bg-black text-white ">
+    <main class="bg-black text-white d-flex flex-column justify-content-center align-items-center p-2">
         <h2>Página de cadastro</h2>
-        <form class="d-inline-flex p-2">
-            <div class="dadosIdentificacao">
-                <h4>Dados pessoais</h4> <!-- Dados de identificação do usuário -->
-                <fieldset>
-                    <label for="nome">Nome Completo*</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome Completo*" required>
-                </fieldset>
-                <fieldset>
-                    <label for="rg">RG*</label>
-                    <input type="text" name="rg" id="rg" required>
-                </fieldset>
-                <fieldset>
-                    <label for="email">E-mail*</label>
-                    <input type="email" name="email" id="email" required>
-                </fieldset>
-                <fieldset>
-                    <label for="senha">Senha*</label>
-                    <input type="password" name="senha" id="senha" required>
-                </fieldset>
-                <fieldset>
-                    <label for="senhaConfirma">Confirme a senha*</label>
-                    <input type="password" name="senhaConfirma" id="senhaConfirma" required>
-                </fieldset>
-            </div>
+        <form class="d-flex flex-column justify-content-center align-items-center">
+            <fieldset class="d-flex justify-content-center align-items-start p-2 w-200">
+                
+                <!-- Dados de identificação do usuário -->
+                <div class="dadosIdentificacao d-flex flex-column flex-nowrap p-2">
+                    <h4>Dados pessoais</h4> 
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo*" aria-label="Campo para o nome completo" required>
+                    <input type="text" name="rg" id="rg" placeholder="RG*" aria-label="Campo para o RG" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail*" aria-label="Campo para o email" required>
+                    <input type="password" name="senha" id="senha" placeholder="Senha*" aria-label="Campo para a senha" required>
+                    <input type="password" name="senhaConfirma" id="senhaConfirma" placeholder="Confirme a senha*" aria-label="Campo para a confirmação de senha" required>
+                </div>
 
-            <div class="dadosEndereco">
-                <h4>Endereço</h4>
-                <fieldset>
-                    <label for="cep">CEP*</label>
-                    <input type="number" name="cep" id="cep" required>
-                </fieldset>
-                <fieldset>
-                    <label for="numero">Número*</label>
-                    <input type="number" name="numero" id="numero" required>
-                </fieldset>
-                <fieldset>
-                    <label for="complemento">Complemento</label>
-                    <input type="text" name="complemento" id="complemento">
-                </fieldset>
-                <fieldset>
-                    <label for="estado">Estado</label>
-                    <input type="text" name="estado" id="estado" required disabled >
-                </fieldset>
-                <fieldset>
-                    <label for="cidade">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" required disabled>
-                </fieldset>
-                <fieldset>
-                    <label for="bairro">Bairro</label>
-                    <input type="text" name="bairro" id="bairro" required disabled>
-                </fieldset>
-                <fieldset>
-                    <label for="rua">Rua</label>
-                    <input type="text" name="rua" id="rua" required disabled>
-                </fieldset>
-                <button class="botaoCadastrar" type="submit">Cadastrar</button>
-            </div>
+                <!-- Endereço do usuário -->
+                <div class="dadosEndereco  d-flex flex-column flex-nowrap p-2">
+                    <h4>Endereço</h4>
+                    <input type="number" name="cep" id="cep" placeholder="CEP*" aria-label="Campo para o CEP" required>
+                    <input type="text" name="estado" id="estado" placeholder="Estado" aria-label="Estado conforme o cep digitado" required disabled >
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" aria-label="Cidade conforme o cep digitado" required disabled>
+                    <input type="text" name="bairro" id="bairro" placeholder="Bairro" aria-label="Bairro conforme o cep digitado" required disabled>
+                    <input type="text" name="rua" id="rua" placeholder="Rua" aria-label="Rua conforme o cep digitado" required disabled>
+                    <input type="number" name="numero" id="numero" placeholder="Número*" aria-label="Campo para o numero de endereço" required>
+                    <input type="text" name="complemento" id="complemento" placeholder="Complemento" aria-label="Campo para complemento de endereço">
+                </div>
+                
+            </fieldset>
+            <button class="botaoCadastrar" type="submit">Cadastrar</button>
         </form>
     </main>
 
