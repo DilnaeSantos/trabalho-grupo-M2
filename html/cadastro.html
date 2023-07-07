@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/cadastro.css">
+    <!-- <link rel="stylesheet" href="../styles/cadastro.css"> -->
+    
+    <!-- BootStrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <script src="../scripts/cadastro.js" defer></script>
     <title>Cadastro</title>
 </head>
 
 <body>
-    <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas de quem somos, nossa equipe, produtos e contato. -->
 
+    <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas -->
     <header class="cabecalho">
         <div class="designFundoLogo">
-            <a href="index.html" class="linkLogoCorvo"><img src="../styles/imagens/logo-corvo.png" alt="logoCorvo"
-                    class="imgLogo"></a>
+            <a href="../index.html" class="linkLogoCorvo"><img src="../styles/imagens/logo-corvo.png" alt="logoCorvo" class="imgLogo"></a>
         </div>
         <h1>MUNIN LÆRETID</h1>
         <nav class="menuNavegacao">
-            <a href="../html/cadastro.html" class="linkPaginaInicial">Cadastro</a>
-            <a href="../html/login.html" class="linkPaginaInicial">Login</a>
+            <a href="./login.html" class="linkPaginaInicial">Login</a>
         </nav>
     </header>
 
+    <!-- Parte principal da página de cadastro -->
     <main>
         <h2>Página de cadastro</h2>
-
         <form>
-
-            <h3>Dados cadastrais</h3>
+            <h4>Dados pessoais</h4> <!-- Dados de identificação do usuário -->
             <div class="dadosIdentificacao">
                 <fieldset>
                     <label for="nome">Nome Completo*</label>
-                    <input type="text" name="nome" id="nome" required>
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo*" required>
                 </fieldset>
                 <fieldset>
                     <label for="rg">RG*</label>
@@ -55,7 +56,7 @@
                 </fieldset>
             </div>
 
-            <h3>Endereço</h3>
+            <h4>Endereço</h4>
             <div class="dadosEndereco">
                 <fieldset>
                     <label for="cep">CEP*</label>
@@ -92,9 +93,12 @@
 
     <!-- Rodape com imagens de paginas de redes sociais -->
     <footer>
-        <img src="./styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
+        <img src="../styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
         <p class="textoDoRodape">&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
 
