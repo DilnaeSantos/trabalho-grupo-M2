@@ -15,6 +15,7 @@ body{
     height: 25vh; /* Altura da janela de visualização */
     margin-top: 10%;
     font-size: 23px;
+    margin-bottom: 20%;
 }
 
 /* div do formulário */
@@ -24,17 +25,17 @@ body{
     border-radius: 61px; /* Raio de curvatura de 10 pixels */
     padding: 75px; /* Espaçamento interno */
     margin-top: 35%;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 label {
     display: flex;
-    margin-top: 20px;
+    margin-top: 25px;
   }
 
 /* caixinha de saída do form */
 .output {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .button{
@@ -52,5 +53,5 @@ label {
 
 .linkRecuperaSenha{
     color: #FFF;
-    font-size: 17px;
+    font-size: 20px;
 }
