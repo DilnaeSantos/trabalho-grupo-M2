@@ -15,14 +15,45 @@
         footer {
             background-color: #002147;
         }
+
+        .imagemFundo {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .accordion {
+            position: relative;
+            z-index: 0;
+            padding-top: 50px;
+            width: 400px;
+            height: 150px;
+            margin-left: 65%;
+        }
+
+        footer {
+            display: flex;
+            left: 0;
+            bottom: 0;
+            margin-top: 68%;
+            width: 100%;
+            height: 20%;
+            background-color: #002147 ;
+            z-index: 1;
+        }
+
+
     </style>
+
     <title>Home</title>
+
 </head>
 
 <!-- Essa vai ser a página home, página de apresentação da empresa -->
 
 <body class="inicio">
+
     <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas de quem somos, nossa equipe, produtos e contato. -->
+
     <header>
             <a href="index.html">
                 <h1> ESCOLA DE ODIN </h1>
@@ -41,39 +72,66 @@
     <img class="imagemFundo" src="./stilos/imagens/auroraboreal.jpg">
     </div>
 
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Accordion Item #3
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-              </div>
-            </div>
-          </div>
+<!-- Imagem de fundo -->
 
+<div class="accordion">
+
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link">
+                Módulo 1
+            </button>
+        </div>
+        <collapse class="show">
+            <div class="card body"></div>
+        </collapse>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link">
+                Módulo 2
+            </button>
+        </div>
+        <collapse class="show">
+            <div class="card body"></div>
+        </collapse>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link">
+                Módulo 3
+            </button>
+        </div>
+        <collapse class="show">
+            <div class="card body"></div>
+        </collapse>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link">
+                Módulo 4
+            </button>
+        </div>
+        <collapse class="show">
+            <div class="card body"></div>
+        </collapse>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <button class="btn btn-link">
+                Módulo 5
+            </button>
+        </div>
+        <collapse class="show">
+            <div class="card body"></div>
+        </collapse>
+    </div>
+
+</div>
 
 
 <!-- Rodape com imagens de paginas de redes sociais -->
