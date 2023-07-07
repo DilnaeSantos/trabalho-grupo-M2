@@ -1,120 +1,100 @@
-@import"./reset.css";
+/*@import"./reset.css";
 
 /* estilizaçao para ficar responsivo */
-@media(max-width: 100px) {
+/*@media(max-width: 100px) {
     header {
         width: 100px;
     }
-}
+}*/
 
-header {
+        header {
+            background-color: #002147;
+            width: 100%;
+            height: 60px;
+        }
 
-    justify-content: center;
-    min-height: 100px;
-    display: flex;
-    justify-content: space-around;
-    background-color: #002147;
-}
+        .imagemFundo {
+            max-width:100%;
+	        height:auto;
+            position: absolute;
+            z-index: -1;
+        }
 
-/* Alinhamento do conteudo dos navegadores e seu tamanho.  */
-nav {
-    margin-bottom: 20px;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+        #accordion {
+            position: relative;
+            z-index: 0;
+            padding-top: 50px;
+            width: 400px;
+            height: 150px;
+            margin-left: 65%;
+        }
 
-}
+        footer {
+            display: flex;
+            left: 0;
+            bottom: 0;
+            margin-top: 35%;
+            padding-top: 12px;
+            width: 100%;
+            height: 20%;
+            background-color: #002147 ;
+            z-index: 1;
+        }
 
-/* Estilização de tamanhos e cores das palavras que são os botões.  */
-a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    height: 70px;
-}
+        nav {
+            display: flex;
+            flex-direction: row;
+            margin-left: 65%;
+            z-index: 1;
+            margin-top: -45px;
+        }
 
-/* Definição de posição e cor do rodapé. */
-footer {
-    display: flex;
-    justify-content: space-between;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #002147 ;
-    padding: 5px;
-    
-}
+        #button1 {
+            margin-right: 10px;
+            margin-bottom: 0px;
+            width: 90px;
+            height: auto;
+        }
+        
+        #button2, #button3, #button4 {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 0;
+            width: 90px;
+            height: auto;
+        }
 
-.blocoFooter{
-    /* background-color: aliceblue; */
-    display: flex;
-    justify-content: space-around;
-    padding-left: 15px;
-    gap: 100px;
-}
+        #menuAcesso {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: auto;
+            margin-bottom: 2px;
+            background-color: black;
+            opacity: 0.4;
+            z-index: 0;
+        }
 
-/* Rodapé da pagina inicial fixada no final da tela.  */
-.rodapeIndex {
-    position: fixed;
-    padding: 5px;
-}
-
-
-/* Alinhamento do texto e cor dentro do rodapé.  */
-p {
-    padding-right: 15px;
-    color: #00000099;
-}
-
-/* Quando passar com mouse por cima dos botões das redes socias no footer, a imagem aumenta um pouco sinalizando que se clicado vai ser redirecionado para outra página.  */
-.imagemFooter:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-/* Imagem do background */
-.imagemFundo {
-    max-width:100%;
-	height:auto;
-    position: absolute;
-    z-index: -1;
-}
-
-/* Coluna da barra de atividades */
-
-.coluna1 {
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    width: 200px;
-    background-color: black;
-    position: absolute;
-    z-index: 0;
-    margin-left: 3%;
-    margin-top: 2%;
-}
-
-button {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    width: 400px;
-    height: 100px;
-}
+        #menuAcesso img {
+            width: 50px;
+            height: auto;
+            z-index: 1;
+        }
 
 
-.modulo1, .modulo2, .modulo3, .modulo4, .modulo5 {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    position: relative;
-    margin-bottom: 20px;
-    margin-left: 68%;
-    position: absolute;
-}
+        .card1, .card2, .card3, .card4, .card5, .card6 {
+            background-color: black;
+            opacity: 0.4;
+        }
+
+        .card1 {
+            border-radius: 4px 4px 0px 0px;
+        }
+
+        .card6 {
+            border-radius: 0px 0px 4px 4px;
+        }
+
+
 
 
