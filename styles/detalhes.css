@@ -66,17 +66,19 @@ div{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-right: 300px;
+    padding-right: 250px;
     text-align: start;
 }
 .preco{
-    margin: 10px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     border-radius: 15%;
     background-color: rgb(85, 94, 94);
     padding: 30px;
+    height: 150px;
+    margin-right: 70px;
 }
 .incluiPlano{
     color: brown;
@@ -89,6 +91,7 @@ div{
 .botaoPreco:hover{
     transform: scale(1.1);
     transition: 0.3s;
+    cursor: pointer;
 }
 .botaoPromocao{
     margin-bottom: 50px;
@@ -100,4 +103,5 @@ div{
 .botaoPromocao:hover{
     transform: scale(1.1);
     transition: 0.3s;
+    cursor: pointer;
 }
