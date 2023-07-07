@@ -9,6 +9,7 @@ body{
     justify-content: center; /* Alinhar horizontalmente ao centro */
     align-items: center; /* Alinhar verticalmente ao centro */
     height: 25vh; /* Altura da janela de visualização */
+    margin-top: 10%;
     font-size: 23px;
 }
 
