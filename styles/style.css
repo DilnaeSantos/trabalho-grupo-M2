@@ -40,17 +40,14 @@
 }
 
 .linkPaginaInicial {
-    margin-right: 6%;
-    text-decoration: none;
-    color: white;
-    background-color: #0033AD;
-    font-size: 90%;
-    padding: 8%;
-    border-radius: 15%;
+    margin-left: 11%;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);      
     transition: 0.2s;
 }
 
-.linkPaginaInicial:hover {
+.linkPaginaInicial:hover {  
+    cursor: pointer;
     transform: scale(1.2);
 }
 
