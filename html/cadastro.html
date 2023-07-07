@@ -29,11 +29,11 @@
     </header>
 
     <!-- Parte principal da página de cadastro -->
-    <main>
+    <main class="bg-black text-white ">
         <h2>Página de cadastro</h2>
-        <form>
-            <h4>Dados pessoais</h4> <!-- Dados de identificação do usuário -->
+        <form class="d-inline-flex p-2">
             <div class="dadosIdentificacao">
+                <h4>Dados pessoais</h4> <!-- Dados de identificação do usuário -->
                 <fieldset>
                     <label for="nome">Nome Completo*</label>
                     <input type="text" name="nome" id="nome" placeholder="Nome Completo*" required>
@@ -56,8 +56,8 @@
                 </fieldset>
             </div>
 
-            <h4>Endereço</h4>
             <div class="dadosEndereco">
+                <h4>Endereço</h4>
                 <fieldset>
                     <label for="cep">CEP*</label>
                     <input type="number" name="cep" id="cep" required>
@@ -86,8 +86,8 @@
                     <label for="rua">Rua</label>
                     <input type="text" name="rua" id="rua" required disabled>
                 </fieldset>
+                <button class="botaoCadastrar" type="submit">Cadastrar</button>
             </div>
-            <button class="botaoCadastrar" type="submit">Cadastrar</button>
         </form>
     </main>
 
