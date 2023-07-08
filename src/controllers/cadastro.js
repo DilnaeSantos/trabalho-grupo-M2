@@ -1,8 +1,90 @@
 
-document.getElementById('cep').addEventListener("change", function(event){
-    event.preventDefault()
+function preencherCampos(){
+    var nome = document.getElementById('nome');
+    var rg = document.getElementById('rg');
+    var email = document.getElementById('email');
+    var senha = document.getElementById('senha');
+    var senhaConfirma = document.getElementById('senhaConfirma');
+    var numero = document.getElementById('numero');
 
-    const cep = document.getElementById('cep')
+    nome.value = `Creusa`;
+    rg.value = `12378946-6`;
+    email.value = `Creusinha@hotmail.com`;
+    senha.value = `Senh4Secret4`;
+    senhaConfirma.value = `Senh4Secret4`;
+    numero.value = `810`;
+}
+
+// ==================================== FUNÇÕES DE VALIDAÇÃO DOS DADOS PESSOAIS
+function validarNome(nome) {
+    console.log("foi - nome " + nome); // só para ver se entrou na função
+
+    var auxiliar = nome.indexOf(' '); // vendo se tem o caractere espaço apenas
+    if (auxiliar < 0 || nome.length < 7) { // se não tiver espaço e o nome for menor q 7
+        console.log("Nome está completo?");
+    } else {
+        console.log("nome ok");
+    }
+}
+
+function validarRg(rg) {
+    console.log("foi - rg " + rg); // só para ver se entrou na função
+    
+    var auxiliar = rg.indexOf('.'); // primeiro ponto é para ser index 2
+    var auxiliar2 = rg.lastIndexOf('.'); // segundo ponto é para ser index 6
+    var auxiliar3 = rg.indexOf('-'); // tracinho é para ser index 10
+    
+    if ((auxiliar === 2 && auxiliar2 === 6 && auxiliar3 === 10) && rg.length === 12) {
+        console.log("Rg ok");
+    } else {
+        console.log("Rg está correto?");
+        console.log("digite todas as pontuações");
+        console.log("padrao considerado : 12.345.678-9");
+    }
+}
+
+function validarEmail(email) {
+    console.log("foi - email " + email) // só para ver se entrou na função
+    
+    var atPos = email.indexOf('@');
+    if (atPos < 4 || email.length - atPos - 1 < 8) {
+        console.log('Email inválido!');
+    } else {
+        console.log("email ok");
+    }
+}
+
+function validarSenha(senha) {
+    console.log("foi - senha " + senha) // só para ver se entrou na função
+    
+    var specialChars = '!@#$%^&*';
+    for (var i = 0; i < senha.length; i++) {
+        if (specialChars.indexOf(senha.charAt(i)) > -1) {
+            if (senha.length < 8 || senha.length > 13) {
+                console.log('Senha inválida! A senha deve ter de 8 a 13 caracteres e pelo menos um caractere especial.');
+            }
+        } else {
+            console.log("deu certo a senha")
+        }
+    }
+}
+
+function validarConfirmaSenha(senha) {
+    if (senha.length < 8 || senha.length > 13) {
+        return false;
+    }
+    var specialChars = '!@#$%^&*';
+    for (var i = 0; i < senha.length; i++) {
+        if (specialChars.indexOf(senha.charAt(i)) > -1) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// ==================================== FUNÇÕES DE VALIDAÇÃO DO ENDEREÇO
+function validarCep(cep){
+    
     const estado = document.getElementById('estado')
     const cidade = document.getElementById('cidade')
     const bairro = document.getElementById('bairro')
@@ -13,46 +95,55 @@ document.getElementById('cep').addEventListener("change", function(event){
     bairro.value = ``
     rua.value = ``
     
-    var cepNumero = cep.value
     var req = new XMLHttpRequest()
-    req.open("GET", `https://viacep.com.br/ws/${cepNumero}/json/`)
-    req.send()
+    req.open("GET", `https://viacep.com.br/ws/${cep}/json/`)
     req.onload = function(){
-        if(req.status == 200){
+        console.log(req.status)
+        if(req.status === 200){
             resObj = JSON.parse(req.responseText)
 
             estado.value = resObj.uf
             cidade.value = resObj.localidade
             bairro.value = resObj.bairro
             rua.value = resObj.logradouro
+        } else {
+            alert("Cep invalido")
         }
     }
+    req.send()
+}
+
+// ==================================== INICIO DOS EVENT LISTENERS
+document.getElementById('nome').addEventListener("change", function(event){
+    event.preventDefault()
+    validarNome(event.target.value)
+})
+
+document.getElementById('email').addEventListener("change", function(event){
+    event.preventDefault()
+    validarEmail(event.target.value)
+})
+
+document.getElementById('rg').addEventListener("change", function(event){
+    event.preventDefault()
+    validarRg(event.target.value)
+})
+
+document.getElementById('senha').addEventListener("change", function(event){
+    event.preventDefault()
+    validarSenha(event.target.value)
+})
+
+document.getElementById('cep').addEventListener("change", function(event){
+    event.preventDefault()
+    validarCep(event.target.value)
 })
 
 // document.getElementById('formCadastro').addEventListener("submit", function(event){
-//     // event.preventDefault()
-
+//     event.preventDefault()
+//     console.log(event.target.value)
 //     //falta verificaões de erros
 //     alert('cadastrado na lista de espera')
-
 // })
 
 
-function preencherCampos(){
-    var nome = document.getElementById('nome')
-    var rg = document.getElementById('rg')
-    var email = document.getElementById('email')
-    var senha = document.getElementById('senha')
-    var senhaConfirma = document.getElementById('senhaConfirma')
-    var numero = document.getElementById('numero')
-
-
-    nome.value = `Creusa`
-    rg.value = `12378946-6`
-    email.value = `Creusinha@hotmail.com`
-    senha.value = `Senh4Secret4`
-    senhaConfirma.value = `Senh4Secret4`
-    numero.value = `810`
-    
-    
-}
