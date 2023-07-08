@@ -1,56 +1,61 @@
-
-
+/* cor de fundo da pagina. */
 main{
     background-color: black;
 }
+/* Margen da imagem e texto do inicio da pagina e suas posições. */
 .imgETextoInicial{
-    margin-left: 50px;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
 }
+/* Posicionamento e cor do titulo da pagina. */
 h2{
-    padding: 40px;
+    padding: 5%;
     color: white;
 }
+/* Definição das cores dos textos. */
 p, h3{
     color: white;
 }
+/* Posicionamento do conteudo da main. */
 main{
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
 }
+/* Posicionamento do texto dentro da div e o arredondamento das suas bordas. */
 div{
-    border-radius: 15%;
+    border-radius: 15px;
     text-align: center;
 }
-
-.imgETextoInicial{
-    display: flex;
-    gap: 10px
-}
+/* Definiçao de tamanhoo dos textos, suas posições, cores e alinhamentos.  */
 .textoApresentacao{
-    font-size: 25px;
+    font-size: 150%;
     color: white;
     text-align: initial;
-    padding: 150px;
-}
+    padding: 100px;
+} 
 .textoDePromocao{
     display: flex;
     flex-direction: column;
     gap: 25px;
     text-align: justify;
-    margin: 100px;
+    margin: 10%;
 }
+/* Destaque do anuncio da promoçao. */
 .anuncioPromo{
     font-size: 25px;
 }
+/* Tamanho da fonte e posicionamento do texto da promoção. */
 .promocao{
     text-align: center;
-    font-size: 40px;
+    font-size: 300%;
 }
+/* Posicionamento das seções dos planos na pagina. */
 .planos{
-    padding: 40px;
-    margin: 50px;
+    padding: 3%;
+    margin: 3%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -58,27 +63,31 @@ div{
     background-color: rgb(58, 75, 75);
     
 }
+/* Ajustes do conteudo dentro das seções dos planos. */
 .conteudoPlanos{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-right: 250px;
+    padding-right: 15%;
     text-align: start;
 }
+/* Alinhamento e coloração do quadro de valores e condições dos planos. */
 .preco{
-    margin-top: 70px;
+    margin-top: 15%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    border-radius: 15%;
+    border-radius: 15px;
     background-color: rgb(85, 94, 94);
-    padding: 30px;
-    height: 150px;
-    margin-right: 70px;
+    padding: 3%;
+    height: 100%;
+    width: 100%;
+    margin-right: 3%;
 }
+/* Destaque da pergunta dentro das seções de planos. */
 .incluiPlano{
     color: brown;
 }
+/* Cores dos botões de valores e pequenas mudanças ao passar o mouse por cima. */
 .botaoPreco{
     color: brown;
     border-radius: 8px;
@@ -89,9 +98,10 @@ div{
     transition: 0.3s;
     cursor: pointer;
 }
+/* Cores do botão de valor e pequenas mudanças ao passar o mouse por cima. */
 .botaoPromocao{
     margin-bottom: 50px;
-    height: 30px;
+    height: 3%;
     color: white;
     border-radius: 8px;
     background-color: rgb(84, 147, 116);
