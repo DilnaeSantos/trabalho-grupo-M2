@@ -16,45 +16,48 @@ function preencherCampos(){
     numero.value = `810`;
 }
 
+// ==================================== FUNÇÕES PARA MOSTRAR COR NOS ERROS
+function mudarCorErro(aux){
+    aux.style.background = "#FF6961";
+}
+function mudarCorNormal(aux){
+    aux.style.background = "#FFFFFF";
+}
 // ==================================== FUNÇÕES DE VALIDAÇÃO DOS DADOS PESSOAIS
 function validarNome(nome) {
-    console.log("foi - nome " + nome.value); // só para ver se entrou na função
-
+    // console.log("foi - nome " + nome.value); // só para ver se entrou na função
     var auxiliar = nome.value.indexOf(' '); // vendo se tem o caractere espaço apenas
-    if (auxiliar < 0 || nome.length < 7) { // se não tiver espaço e o nome for menor q 7
-
-        console.log("Nome está completo?");
-        nome.style.background = "#FF6961";
+    if (auxiliar > 1 && nome.value.length > 7) { // se o espaço tiver no "meio" e o nome for maior q 7
+        mudarCorNormal(nome);
     } else {
-        console.log("nome ok");
-        nome.style.background = "#FFFFFF";
+        mudarCorErro(nome);
     }
 }
 
 function validarRg(rg) {
     // console.log("foi - rg " + rg); // só para ver se entrou na função
+    var auxiliar = rg.value.indexOf('.'); // primeiro ponto é para ser index 2
+    var auxiliar2 = rg.value.lastIndexOf('.'); // segundo ponto é para ser index 6
+    var auxiliar3 = rg.value.indexOf('-'); // tracinho é para ser index 10
     
-    var auxiliar = rg.indexOf('.'); // primeiro ponto é para ser index 2
-    var auxiliar2 = rg.lastIndexOf('.'); // segundo ponto é para ser index 6
-    var auxiliar3 = rg.indexOf('-'); // tracinho é para ser index 10
-    
-    if ((auxiliar === 2 && auxiliar2 === 6 && auxiliar3 === 10) && rg.length === 12) {
-        console.log("Rg ok");
+    if ((auxiliar === 2 && auxiliar2 === 6 && auxiliar3 === 10) && rg.value.length === 12) {
+        mudarCorNormal(rg);
     } else {
-        console.log("Rg está correto?");
-        console.log("digite todas as pontuações");
-        console.log("padrao considerado : 12.345.678-9");
+        mudarCorErro(rg);
     }
+    console.log("padrao considerado : 12.345.678-9");
 }
 
 function validarEmail(email) {
     // console.log("foi - email " + email); // só para ver se entrou na função
     
-    var atPos = email.indexOf('@');
-    if (atPos < 4 || email.length - atPos - 1 < 8) {
+    var atPos = email.value.indexOf('@');
+    if (atPos < 4 || email.value.length - atPos - 1 < 8) {
         console.log('Email inválido!');
+        mudarCorErro(email);
     } else {
         console.log("email ok");
+        mudarCorNormal(email);
     }
 }
 
@@ -63,16 +66,18 @@ function validarSenha(senha) {
     
     var specialChars = '!@#$%^&*';
     var auxiliar = false;
-    for (var i = 0; i < senha.length; i++) {
-        if (specialChars.indexOf(senha.charAt(i)) > -1) {
+    for (var i = 0; i < senha.value.length; i++) {
+        if (specialChars.indexOf(senha.value.charAt(i)) > -1) {
             auxiliar = true; // verificando se há caractere especial
         }
     }
 
-    if ( auxiliar && senha.length > 8 && senha.length < 13) {
+    if ( auxiliar && senha.value.length > 8 && senha.value.length < 13) {
         console.log("deu certo a senha");
+        mudarCorNormal(senha);
     } else {
         console.log('Senha inválida! A senha deve ter de 8 a 13 caracteres e pelo menos um caractere especial.');
+        mudarCorErro(senha);
     }
 }
 
@@ -82,10 +87,12 @@ function validarConfirmaSenha(confirma) {
     let senha = document.getElementById('senha').value;
     // console.log("foi - senha " + senha);
 
-    if (senha === confirma) {
+    if (senha === confirma.value) {
         console.log('senha confirmada');
+        mudarCorNormal(confirma);
     } else {
         console.log('senha diferente');
+        mudarCorErro(confirma);
     }
 }
 
@@ -124,32 +131,31 @@ function validarCep(cep){
 document.getElementById('nome').addEventListener("change", function(event){
     event.preventDefault()
     validarNome(event.target)
-    // validarNome(event.target.value)
-})
-
-document.getElementById('email').addEventListener("change", function(event){
-    event.preventDefault()
-    validarEmail(event.target.value)
 })
 
 document.getElementById('rg').addEventListener("change", function(event){
     event.preventDefault()
-    validarRg(event.target.value)
+    validarRg(event.target)
+})
+
+document.getElementById('email').addEventListener("change", function(event){
+    event.preventDefault()
+    validarEmail(event.target)
 })
 
 document.getElementById('senha').addEventListener("change", function(event){
     event.preventDefault()
-    validarSenha(event.target.value)
+    validarSenha(event.target)
 })
 
 document.getElementById('senhaConfirma').addEventListener("change", function(event){
     event.preventDefault()
-    validarConfirmaSenha(event.target.value)
+    validarConfirmaSenha(event.target)
 })
 
 document.getElementById('cep').addEventListener("change", function(event){
     event.preventDefault()
-    validarCep(event.target.value)
+    validarCep(event.target)
 })
 
 // ==================================== ENVIO DO FORMULARIO PARA O CADASTRO
