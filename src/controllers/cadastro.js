@@ -1,4 +1,5 @@
 
+// ==================================== FUNÇÕES DE TESTES
 function preencherCampos(){
     var nome = document.getElementById('nome');
     var rg = document.getElementById('rg');
@@ -7,17 +8,17 @@ function preencherCampos(){
     var senhaConfirma = document.getElementById('senhaConfirma');
     var numero = document.getElementById('numero');
 
-    nome.value = `Creusa`;
+    nome.value = `Creusa Aparecida`;
     rg.value = `12378946-6`;
     email.value = `Creusinha@hotmail.com`;
-    senha.value = `Senh4Secret4`;
-    senhaConfirma.value = `Senh4Secret4`;
+    senha.value = `Senh4Secret4#`;
+    senhaConfirma.value = `Senh4Secret4#`;
     numero.value = `810`;
 }
 
 // ==================================== FUNÇÕES DE VALIDAÇÃO DOS DADOS PESSOAIS
 function validarNome(nome) {
-    console.log("foi - nome " + nome); // só para ver se entrou na função
+    // console.log("foi - nome " + nome); // só para ver se entrou na função
 
     var auxiliar = nome.indexOf(' '); // vendo se tem o caractere espaço apenas
     if (auxiliar < 0 || nome.length < 7) { // se não tiver espaço e o nome for menor q 7
@@ -28,7 +29,7 @@ function validarNome(nome) {
 }
 
 function validarRg(rg) {
-    console.log("foi - rg " + rg); // só para ver se entrou na função
+    // console.log("foi - rg " + rg); // só para ver se entrou na função
     
     var auxiliar = rg.indexOf('.'); // primeiro ponto é para ser index 2
     var auxiliar2 = rg.lastIndexOf('.'); // segundo ponto é para ser index 6
@@ -44,7 +45,7 @@ function validarRg(rg) {
 }
 
 function validarEmail(email) {
-    console.log("foi - email " + email) // só para ver se entrou na função
+    // console.log("foi - email " + email); // só para ver se entrou na função
     
     var atPos = email.indexOf('@');
     if (atPos < 4 || email.length - atPos - 1 < 8) {
@@ -55,31 +56,34 @@ function validarEmail(email) {
 }
 
 function validarSenha(senha) {
-    console.log("foi - senha " + senha) // só para ver se entrou na função
+    // console.log("foi - senha " + senha); // só para ver se entrou na função
     
     var specialChars = '!@#$%^&*';
+    var auxiliar = false;
     for (var i = 0; i < senha.length; i++) {
         if (specialChars.indexOf(senha.charAt(i)) > -1) {
-            if (senha.length < 8 || senha.length > 13) {
-                console.log('Senha inválida! A senha deve ter de 8 a 13 caracteres e pelo menos um caractere especial.');
-            }
-        } else {
-            console.log("deu certo a senha")
+            auxiliar = true; // verificando se há caractere especial
         }
+    }
+
+    if ( auxiliar && senha.length > 8 && senha.length < 13) {
+        console.log("deu certo a senha");
+    } else {
+        console.log('Senha inválida! A senha deve ter de 8 a 13 caracteres e pelo menos um caractere especial.');
     }
 }
 
-function validarConfirmaSenha(senha) {
-    if (senha.length < 8 || senha.length > 13) {
-        return false;
+function validarConfirmaSenha(confirma) {
+    // console.log("foi - confirma " + confirma);
+    
+    let senha = document.getElementById('senha').value;
+    // console.log("foi - senha " + senha);
+
+    if (senha === confirma) {
+        console.log('senha confirmada');
+    } else {
+        console.log('senha diferente');
     }
-    var specialChars = '!@#$%^&*';
-    for (var i = 0; i < senha.length; i++) {
-        if (specialChars.indexOf(senha.charAt(i)) > -1) {
-            return true;
-        }
-    }
-    return false;
 }
 
 // ==================================== FUNÇÕES DE VALIDAÇÃO DO ENDEREÇO
@@ -132,6 +136,11 @@ document.getElementById('rg').addEventListener("change", function(event){
 document.getElementById('senha').addEventListener("change", function(event){
     event.preventDefault()
     validarSenha(event.target.value)
+})
+
+document.getElementById('senhaConfirma').addEventListener("change", function(event){
+    event.preventDefault()
+    validarConfirmaSenha(event.target.value)
 })
 
 document.getElementById('cep').addEventListener("change", function(event){
