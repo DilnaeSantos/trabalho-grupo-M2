@@ -1,11 +1,7 @@
 
 
-body{
+main{
     background-color: black;
-}
-header{
-    display: flex;
-    background-color: silver;
 }
 .imgETextoInicial{
     margin-left: 50px;
