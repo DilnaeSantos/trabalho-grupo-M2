@@ -18,13 +18,16 @@ function preencherCampos(){
 
 // ==================================== FUNÇÕES DE VALIDAÇÃO DOS DADOS PESSOAIS
 function validarNome(nome) {
-    // console.log("foi - nome " + nome); // só para ver se entrou na função
+    console.log("foi - nome " + nome.value); // só para ver se entrou na função
 
-    var auxiliar = nome.indexOf(' '); // vendo se tem o caractere espaço apenas
+    var auxiliar = nome.value.indexOf(' '); // vendo se tem o caractere espaço apenas
     if (auxiliar < 0 || nome.length < 7) { // se não tiver espaço e o nome for menor q 7
+
         console.log("Nome está completo?");
+        nome.style.background = "#FF6961";
     } else {
         console.log("nome ok");
+        nome.style.background = "#FFFFFF";
     }
 }
 
@@ -120,7 +123,8 @@ function validarCep(cep){
 // ==================================== INICIO DOS EVENT LISTENERS
 document.getElementById('nome').addEventListener("change", function(event){
     event.preventDefault()
-    validarNome(event.target.value)
+    validarNome(event.target)
+    // validarNome(event.target.value)
 })
 
 document.getElementById('email').addEventListener("change", function(event){
@@ -148,11 +152,12 @@ document.getElementById('cep').addEventListener("change", function(event){
     validarCep(event.target.value)
 })
 
-// document.getElementById('formCadastro').addEventListener("submit", function(event){
-//     event.preventDefault()
-//     console.log(event.target.value)
-//     //falta verificaões de erros
-//     alert('cadastrado na lista de espera')
-// })
+// ==================================== ENVIO DO FORMULARIO PARA O CADASTRO
+document.getElementById('formCadastro').addEventListener("submit", function(event){
+    // event.preventDefault()
+    console.log(event.target.value)
+    //falta verificaões de erros
+    alert('cadastrado na lista de espera')
+})
 
 
