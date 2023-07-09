@@ -24,9 +24,9 @@ Móvel: 360 x 720. */
         max-width: 700px;
         /* border: solid red; */
     }
-    fieldset{
-        /* border: solid white; */
-    }
+    /* fieldset{
+        border: solid white;
+    } */
     .dadosIdentificacao, .dadosEndereco{
         /* border: solid orange; */
         width: 100%;        
