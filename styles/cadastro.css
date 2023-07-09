@@ -1,95 +1,50 @@
 /* -------------------------------------- MAIN DO  CADASTRO */
-main{
-    background-color: #000;
-    color: #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 
-}
+/* main > form{
+    border: solid green;
+} */
 
-main > h2{
-    margin: .5rem 2rem;
-    color: #ccc;
-    width: 90%;
-}
-
-main > form{
-    width: 90%;
-    margin: .5rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-main > form > h3{
-    margin: .5rem 0;
-    width: 100%;
-    border-bottom: solid #3339;
-}
-
+/* fieldset{
+    border: solid blue;
+} */
 .dadosIdentificacao, .dadosEndereco{
-    padding: .5rem 1rem;
-    background-color: #03a;
+    /* border: solid yellow; */
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: start;
-}
-.dadosIdentificacao{
-    height: 190px;
-}
-
-.dadosEndereco{
-    height: 240px;
-}
-
-.dadosIdentificacao > fieldset{
-    padding: .5rem;
-    background-color: #03a;
-    border: none;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.dadosEndereco > fieldset{
-    padding: .5rem;
-    background-color: #03a;
-    border: none;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-/* --------------------------------------------------------------------- */
-
-.botaoCadastrar{
-    background-color: #03a;
-    color: #ccc;
-    margin: .5rem 2rem;
-    height: 2rem;
-    width: 6rem;
-    transition: .3s;
-}
-.botaoCadastrar:hover{
-    background-color: #03a5;
 }
 
 /* -------------------------------------- RESPONSIVIDADE DO  CADASTRO */
 
+/* 1920 x 1080.
+768 x 1024.
+Móvel: 360 x 720. */
 
-@media (min-width: 700px) { 
+@media only screen and (min-width: 500px) and (max-width: 999px) { 
     /* Telas maiores de 700px */
     main > form{
-        width: 600px;
+        max-width: 700px;
+        /* border: solid red; */
     }
-    main > h2{
-        width: 600px;
+    /* fieldset{
+        border: solid white;
+    } */
+    .dadosIdentificacao, .dadosEndereco{
+        /* border: solid orange; */
+        width: 100%;        
+    }
+}
+
+@media (min-width: 1000px) { 
+    /* Telas no minimo de 1000px */
+    main > form{
+        width: 90%;
+        /* border: solid fuchsia; */
+    }
+    fieldset{
+        /* border: solid brown; */
+        width: 100%;
+    }
+    .dadosIdentificacao, .dadosEndereco{
+        /* border: solid orange; */
+        width: 50%;        
     }
 }
