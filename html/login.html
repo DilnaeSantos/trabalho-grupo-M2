@@ -5,43 +5,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./stilos/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <title>Login</title>
 </head>
 
-<!-- Essa vai ser a página home, página de apresentação da empresa -->
-
 <body class="inicio">
-    <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas de quem somos, nossa equipe, produtos e contato. -->
-    <header>
-        <nav>
-            <a href="index.html">
-                <h1>INDEFINIDO</h1>
-            </a>
-        </nav>
-        
-        <nav>
-            <a id="botoesHeader" href="detalhes.html">Produtos</a>
-            <a id="botoesHeader" href="contato.html">Contato</a>
-            <a id="botoesHeader" href="cadastro.html">Cadastrar</a>
-            <a id="botoesHeader" href="login.html">Login</a>
+    <!-- Essa vai ser a página home, página de apresentação da empresa -->
+    <header class="cabecalho">
+        <div class="designFundoLogo">
+            <a href="../index.html" class="linkLogoCorvo"><img src="../styles/imagens/logo-corvo.png" alt="logoCorvo"
+                    class="imgLogo"></a>
+        </div>
+        <h1>MUNIN LÆRETID</h1>
+        <nav class="menuNavegacao">
+            <a href="../html/cadastro.html" class="btn btn-outline-primary linkPaginaInicial">Cadastro</a>
+            <a href="../html/login.html" class="btn btn-outline-primary linkPaginaInicial">Login</a>
         </nav>
     </header>
 
-    <!-- /na main esta página tem apenas uma foto do logo da empresa. -->
-    <main class="mainIndex">
-      <h2>pagina de login</h2>
-    </main>
+    <main class="formcontainer">
+        <section class="form-login">
+            <form class="form">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Digite o nome do usuário">
+                <label for="senha">Senha:</label>
+                <input type="senha" id="senha" name="senha" required placeholder="Insira sua senha">
+            
+                <div class="buttons">
+                    <button id="submit" type="button">Login</button>
+                </div>
+            </form>    
+            <p class="linkRecuperaSenha"><a href="../html/recuperaSenha.html">Esqueci minha senha.</a></p>
+        </section>
+    </main>        
 
     <!-- Rodape com imagens de paginas de redes sociais -->
-    <footer class="rodapeIndex">
-        <div class="blocoFooter">
-            <img class="imagemFooter" src="./stilos/imagens/logotipo-do-instagram.png" alt="logoInstagram" />
-            <img class="imagemFooter" src="./stilos/imagens/facebook.png" alt="logoFace" />
-            <img class="imagemFooter" src="./stilos/imagens/whatsapp.png" alt="logoWhats" />
-        </div>
-        <p>Todos os direitos reservados.</p>
+    <footer>
+        <img src="../styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
+        <p class="textoDoRodape">&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
     </footer>
-</body>
 
+    <script src="../src/controllers/login.js"></script>
+</body>
 </html>
