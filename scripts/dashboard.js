@@ -1,5 +1,7 @@
 // dashboard.js
 
+// Aqui é a função para pegar lugares aleatórios na Noruega no street view a cada F5 da página
+
 function initialize() {
     var randomLocation = getRandomLocation();
     var panoramaOptions = {
@@ -13,6 +15,8 @@ function initialize() {
         panoramaOptions
     );
 }
+
+// Os números são a latitude e longitude da Noruega
 
 function getRandomLocation() {
     var minLat = 58.9783;
