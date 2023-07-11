@@ -14,7 +14,7 @@ body{
     align-items: center; /* Alinhar verticalmente ao centro */
     height: 25vh; /* Altura da janela de visualização */
     margin-top: 10%;
-    font-size: 23px;
+    font-size: 23%;
     margin-bottom: 20%;
 }
 
@@ -25,12 +25,13 @@ body{
     border-radius: 61px; /* Raio de curvatura de 10 pixels */
     padding: 75px; /* Espaçamento interno */
     margin-top: 35%;
-    font-size: 35px;
+    font-size: 27px;
 }
 
 label {
     display: flex;
     margin-top: 25px;
+    color: black;
   }
 
 /* caixinha de saída do form */
@@ -46,9 +47,9 @@ label {
 
 #submit{
     width: 114px;
-    height: 35px;
     flex-shrink: 0;
     background: #0033AD;
+    margin-top: 10%;
 }
 
 .linkRecuperaSenha{
