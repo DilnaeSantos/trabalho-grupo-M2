@@ -20,6 +20,11 @@ h2 {
     z-index: -3;
 }
 
+h2 {
+    color: white;
+    font-style: bold;
+}
+
 .imagemFundo {
     max-width:100%;
     height:auto;
@@ -129,7 +134,12 @@ nav:hover{
     border-radius: 0px 0px 4px 4px;
 }
 
-p {
+.card1, .card2, .card3, .card4 p {
+    color: white;
+    font-style: bold;
+}
+
+.card5, .card6 p{
     color: white;
     font-style: bold;
 }
