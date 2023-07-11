@@ -13,6 +13,13 @@ header {
     height: 60px;
 }
 
+header img {
+    height: 55px;
+    width: auto;
+    margin-left: 12px;
+    margin-top: 3px;
+}
+
 h2 {
     position: absolute;
     margin-left: 25%;
@@ -142,10 +149,14 @@ nav:hover{
 }
 
 footer {
-    position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
+    position: relative;
+    display: flex;
+    margin-top: 287px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    text-align: center;
 }
 
 
