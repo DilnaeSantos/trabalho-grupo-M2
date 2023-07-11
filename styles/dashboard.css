@@ -1,11 +1,11 @@
-/*@import"./reset.css";
+@import"./reset.css";
 
 /* estilizaçao para ficar responsivo */
-/*@media(max-width: 100px) {
+@media(max-width: 100px) {
     header {
         width: 100px;
     }
-}*/
+}
 
 header {
     background-color: #002147;
@@ -29,6 +29,8 @@ h2 {
     font-style: bold;
 }
 
+
+
 .imagemFundo {
     max-width:100%;
     height:auto;
@@ -44,6 +46,7 @@ h2 {
     height: 150px;
     margin-left: 66%;
 }
+
 
 footer {
     display: flex;
@@ -65,15 +68,13 @@ nav {
     margin-top: -45px;
 }
 
-nav:hover{
-
-}
 
 #button1 {
     margin-right: 10px;
     margin-bottom: 0px;
     width: 90px;
     height: auto;
+    
 }
 
 #button2, #button3, #button4 {
@@ -83,6 +84,27 @@ nav:hover{
     width: 90px;
     height: auto;
 }
+
+#button1 a {
+        text-decoration: none;
+        color: white;
+}
+
+#button2 a {
+    text-decoration: none;
+    color: white;
+}
+
+#button3 a {
+    text-decoration: none;
+    color: white;
+}
+
+#button4 a {
+    text-decoration: none;
+    color: white;
+}
+
 
 #menuAcesso {
     display: flex;
@@ -127,7 +149,7 @@ nav:hover{
 
 .card1, .card2, .card3, .card4, .card5, .card6 {
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.48;
 }
 
 .card1 {

@@ -29,3 +29,4 @@ function getRandomLocation() {
 
     return { lat: latitude, lng: longitude };
 }
+
