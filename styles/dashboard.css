@@ -159,6 +159,29 @@ footer {
     text-align: center;
 }
 
+.redesSociais {
+    background-color: aliceblue;
+    width: 125px;
+    height: 40px;
+    position: absolute;
+    margin-left: 88.5%;
+    margin-bottom: 10px;
+
+}
+
+.instagramIcone {
+    color: black;
+    margin-right: 4px;
+    margin-bottom: 10px;
+}
+
+.faceIcon, .whatsIcon {
+    color: black;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+}
+
 
 
 
