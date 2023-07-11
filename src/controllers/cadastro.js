@@ -42,11 +42,8 @@ function validarNome(nome) {
 
 function validarRg(rg) {
     // console.log("foi - rg " + rg); // só para ver se entrou na função
-    var auxiliar = rg.value.indexOf('.'); // primeiro ponto é para ser index 2
-    var auxiliar2 = rg.value.lastIndexOf('.'); // segundo ponto é para ser index 6
-    var auxiliar3 = rg.value.indexOf('-'); // tracinho é para ser index 10
     
-    if ((auxiliar === 2 && auxiliar2 === 6 && auxiliar3 === 10) && rg.value.length === 12) {
+    if (rg.value.length === 9) {
         mudarCorNormal(rg);
         return true;
     } else {
