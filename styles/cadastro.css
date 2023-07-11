@@ -1,50 +1,131 @@
-/* -------------------------------------- MAIN DO  CADASTRO */
+/* ---------------------------------------------------------- MAIN DO CADASTRO */
+/* definindo a cor de fundo em preto e a cor das letras em um tom mais suave do branco */
+main{
+    background-color: #000;
+    color: #eee;
+}
 
-/* main > form{
-    border: solid green;
-} */
+#formCadastro{
+    margin: 1rem .5rem;
+    background-color: #152a63;
+    border-radius: 15px;
+    padding-bottom: 1.5rem;
+}
 
-/* fieldset{
-    border: solid blue;
-} */
-.dadosIdentificacao, .dadosEndereco{
-    /* border: solid yellow; */
+.grupoFieldset{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
-/* -------------------------------------- RESPONSIVIDADE DO  CADASTRO */
-
-/* 1920 x 1080.
-768 x 1024.
-Móvel: 360 x 720. */
-
-@media only screen and (min-width: 500px) and (max-width: 999px) { 
-    /* Telas maiores de 700px */
-    main > form{
-        max-width: 700px;
-        /* border: solid red; */
-    }
-    /* fieldset{
-        border: solid white;
-    } */
-    .dadosIdentificacao, .dadosEndereco{
-        /* border: solid orange; */
-        width: 100%;        
-    }
+.dadosIdentificacao, .dadosEndereco{
+    padding: .5rem;
+    width: 100%;
 }
 
-@media (min-width: 1000px) { 
-    /* Telas no minimo de 1000px */
-    main > form{
-        width: 90%;
-        /* border: solid fuchsia; */
+/* linha em baixo das legendas do fieldset */
+.legendaFieldset{
+    border-bottom: solid 1px #eee;
+}
+
+/* Definição geral para os grupo de input */
+.grupoInput{
+    padding-bottom: 1rem;
+    width: 100%;
+}
+.grupoInput > small{
+    font-weight: lighter;
+    font-size: x-small;
+}
+
+/* definição dos input cidade e uf */
+.cidadeInput{
+    width: 70%;
+    padding-right: .2rem;
+}
+.ufInput{
+    width: 30%;
+    padding-left: .2rem;
+}
+
+/* estilo para o botão de cadastro */
+.botaoCadastro{
+    transition: .2s;
+}
+.botaoCadastro:hover{
+    scale: 1.05;
+}
+
+/* ---------------------------------------------------------- RESPONSIVIDADE DO  CADASTRO */
+/* 1920 x 1080. 768 x 1024. Móvel: 360 x 720. */
+
+/* Telas maiores de 500px */
+@media (min-width: 500px) { 
+    #formCadastro{
+        max-width: 500px;
     }
-    fieldset{
-        /* border: solid brown; */
+    .grupoFieldset{
+        padding: .5rem 1rem;
+    }
+    /* Definição geral para os grupo de input */
+    .grupoInput{
+        padding: .2rem .5rem;
+        width: 50%;
+    }
+
+    /* definição de largura dos input nome, rg e email */
+    .nomeInput{
+        width: 70%;
+    }
+    .rgInput{
+        width: 30%;
+    }
+    .emailInput{
         width: 100%;
     }
-    .dadosIdentificacao, .dadosEndereco{
-        /* border: solid orange; */
-        width: 50%;        
+
+    /* definição de largura dos input de endereço*/
+    .cepInput{
+        width: 30%;
+    }
+    .cidadeInput{
+        width: 70%;
+    }
+    .bairroInput, .ruaInput{
+        width: 80%;
+    }
+    .ufInput, .numeroInput{
+        width: 20%;
     }
 }
+
+/* Telas maiores de 800px */
+@media (min-width: 800px) { 
+    #formCadastro{
+        max-width: 900px;
+    }
+    
+    /* definição de largura dos input nome, rg e email */
+    .nomeInput{
+        width: 40%;
+    }
+    .rgInput{
+        width: 20%;
+    }
+    .emailInput{
+        width: 40%;
+    }
+
+    /* definição de largura dos input de endereço*/
+    .cepInput, .bairroInput{
+        width: 30%;
+    }
+    .cidadeInput, .ruaInput{
+        width: 50%;
+    }
+    .ufInput, .numeroInput{
+        width: 20%;
+    }
+}
+
+
