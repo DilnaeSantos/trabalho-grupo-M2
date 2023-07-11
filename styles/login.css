@@ -46,7 +46,7 @@ label {
 }
 
 #submit{
-    width: 114px;
+    width: 70%;
     flex-shrink: 0;
     background: #0033AD;
     margin-top: 10%;
