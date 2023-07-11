@@ -31,14 +31,15 @@
     <!-- Parte principal da página de cadastro -->
     <main class="d-flex flex-column justify-content-start align-items-center">
 
-        <form class="d-flex flex-column justify-content-start align-items-center p-2" id="formCadastro">
+        <form class="d-flex flex-column justify-content-start align-items-center" id="formCadastro">
             
+            <!-- Div para agrupar os fieldset, usado na responsividade -->
             <div class="w-100">
                 
                 <!-- Dados de identificação do usuário -->
                 <fieldset class="dadosIdentificacao d-flex flex-column flex-nowrap">
 
-                    <legend>Dados pessoais</legend> 
+                    <legend class="legendaFieldset">Dados pessoais</legend> 
 
                     <div class="form-group grupoInput">
                         <label for="nome">Nome Completo*</label>
@@ -69,32 +70,61 @@
                     </div>
                 
                 </fieldset>
+                <!-- Fim para o Dados de identificação do usuário -->
+
 
                 <!-- Endereço do usuário -->
                 <fieldset class="dadosEndereco d-flex flex-column flex-nowrap">
-                    <legend>Endereço</legend>
-                    <input type="number" name="cep" id="cep" placeholder="CEP*" aria-label="CEP" required>
-                    <input type="text" name="estado" id="estado" placeholder="Estado" aria-label="Estado conforme o cep digitado" required disabled >
-                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" aria-label="Cidade conforme o cep digitado" required disabled>
-                    <input type="text" name="bairro" id="bairro" placeholder="Bairro" aria-label="Bairro conforme o cep digitado" required disabled>
-                    <input type="text" name="rua" id="rua" placeholder="Rua" aria-label="Rua conforme o cep digitado" required disabled>
-                    <input type="number" name="numero" id="numero" placeholder="Número*" aria-label="Numero de endereço" required>
-                    <input type="text" name="complemento" id="complemento" placeholder="Complemento" aria-label="Complemento de endereço">
+                    
+                    <legend class="legendaFieldset">Endereço</legend>
 
-                    <!-- <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="First name">
+                    <div class="form-group grupoInput">
+                        <label for="cep">CEP*</label>
+                        <input type="number" class="form-control" id="cep" aria-label="CEP" placeholder="00000-000" required>
+                        <small>* Apenas os números</small>
+                    </div>
+                    
+                    <div class="row grupoInput">
+                        <div class="col cidade">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="**" aria-label="Cidade" required disabled>
                         </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name">
+                        <div class="col uf">
+                            <label for="cidade">UF</label>
+                            <input type="text"  class="form-control" id="estado" placeholder="**" aria-label="Estado" required disabled >
                         </div>
-                    </div> -->
+                    </div>
+
+                    <div class="form-group grupoInput">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" placeholder="**" aria-label="Bairro" required disabled>
+                    </div>
+                    
+                    <div class="form-group grupoInput">
+                        <label for="rua">Rua</label>
+                        <input type="text" class="form-control" id="rua" placeholder="**" aria-label="Rua" required disabled>
+                    </div>
+                    
+                    <div class="form-group grupoInput">
+                        <label for="numero">Número*</label>
+                        <input type="number" class="form-control" id="numero" placeholder="123" aria-label="Número" required>
+                    </div>
+
+                    <div class="form-group grupoInput">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento" placeholder="Complemento" aria-label="Complemento">
+                    </div>
 
                 </fieldset>
+                <!-- Fim do Endereço do usuário -->
 
             </div>
+            <!-- Fim da Div para agrupar os fieldset, usado na responsividade -->
+
             <button class="btn btn-primary" type="submit">Cadastrar</button>
+
         </form>
+
     </main>
 
     <!-- Rodape com bandeira da noruega -->

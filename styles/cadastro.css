@@ -1,22 +1,26 @@
-/* -------------------------------------- MAIN DO  CADASTRO */
-
+/* ------------- MAIN DO CADASTRO */
+/* definindo a cor de fundo em preto */
+/* definindo a cor das letras em um tom mais suave do branco */
 main{
     background-color: #000;
-    color: #fff;
+    color: #eee;
 }
-main > form{
-    /* border: solid green; */
-    /* margin-top: 5%; */
-    width: 100%;
+
+#formCadastro{
+    margin: 5% 2%;
+    background-color: #152a63;
+    border-radius: 15px;
+    padding-bottom: 1.5rem;
 }
 
 .dadosIdentificacao, .dadosEndereco{
-    /* border: solid yellow; */
-    border-radius: 15px;
-    margin-bottom: 5%;
-    padding: 5%;
-    background-color: #152a63;
+    padding: .5rem;
     width: 100%;
+}
+
+/* linha em baixo das legendas do fieldset */
+.legendaFieldset{
+    border-bottom: solid 1px #eee;
 }
 
 .grupoInput{
@@ -24,12 +28,18 @@ main > form{
 }
 
 .grupoInput > small{
-    /* padding-left: 1rem; */
     font-weight: lighter;
     font-size: x-small;
 }
 
-/* -------------------------------------- RESPONSIVIDADE DO  CADASTRO */
+.cidade{
+    padding-right: 0.2rem;
+}
+.uf{
+    padding-left: 0.2rem;
+}
+
+/* ------------- RESPONSIVIDADE DO  CADASTRO */
 
 /* 1920 x 1080.
 768 x 1024.
