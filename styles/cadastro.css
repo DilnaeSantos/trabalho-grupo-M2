@@ -1,15 +1,32 @@
 /* -------------------------------------- MAIN DO  CADASTRO */
 
-/* main > form{
-    border: solid green;
-} */
+main{
+    background-color: #000;
+    color: #fff;
+}
+main > form{
+    /* border: solid green; */
+    /* margin-top: 5%; */
+    width: 100%;
+}
 
-/* fieldset{
-    border: solid blue;
-} */
 .dadosIdentificacao, .dadosEndereco{
     /* border: solid yellow; */
+    border-radius: 15px;
+    margin-bottom: 5%;
+    padding: 5%;
+    background-color: #152a63;
     width: 100%;
+}
+
+.grupoInput{
+    padding-bottom: 1rem;
+}
+
+.grupoInput > small{
+    /* padding-left: 1rem; */
+    font-weight: lighter;
+    font-size: x-small;
 }
 
 /* -------------------------------------- RESPONSIVIDADE DO  CADASTRO */
@@ -18,33 +35,10 @@
 768 x 1024.
 Móvel: 360 x 720. */
 
-@media only screen and (min-width: 500px) and (max-width: 999px) { 
-    /* Telas maiores de 700px */
+/* Telas maiores de 500px */
+@media (min-width: 500px) { 
     main > form{
-        max-width: 700px;
-        /* border: solid red; */
-    }
-    /* fieldset{
-        border: solid white;
-    } */
-    .dadosIdentificacao, .dadosEndereco{
-        /* border: solid orange; */
-        width: 100%;        
-    }
-}
-
-@media (min-width: 1000px) { 
-    /* Telas no minimo de 1000px */
-    main > form{
-        width: 90%;
-        /* border: solid fuchsia; */
-    }
-    fieldset{
-        /* border: solid brown; */
-        width: 100%;
-    }
-    .dadosIdentificacao, .dadosEndereco{
-        /* border: solid orange; */
-        width: 50%;        
+        max-width: 500px;
+        border: solid red;
     }
 }
