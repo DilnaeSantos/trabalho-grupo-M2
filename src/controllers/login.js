@@ -8,11 +8,13 @@ document.getElementById('submit').addEventListener('click', function () {
     }
 
     if (!validarSenha(senha)) {
-        alert('Senha inválida! A senha deve ter de 8 a 13 caracteres e pelo menos um caractere especial.');
+        alert('Senha inválida! A senha deve ter no mínimo 8 caracteres e pelo menos um caractere especial.');
         return;
     }
 
-    alert('Formulário válido!'); // Apenas para fins de exemplo
+    alert('Formulário válido!'); 
+
+    window.location.href = '../html/dashboard.html';
 });
 
 function validarEmail(email) {
@@ -24,7 +26,7 @@ function validarEmail(email) {
 }
 
 function validarSenha(senha) {
-    if (senha.length < 8 || senha.length > 13) {
+    if (senha.length < 8) {
         return false;
     }
     var specialChars = '!@#$%^&*';
