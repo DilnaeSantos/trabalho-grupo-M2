@@ -41,30 +41,26 @@
 
                     <legend class="legendaFieldset">Dados pessoais</legend> 
 
-                    <div class="grupoInputNome d-flex">
-
-                        <div class="form-group grupoInput nomeInput">
-                            <label for="nome">Nome Completo*</label>
-                            <input type="text" class="form-control" id="nome" aria-label="Nome completo" placeholder="João Santos" required>
-                        </div>
-                        
-                        <div class="form-group grupoInput rgInput">
-                            <label for="rg">RG*</label>
-                            <input type="number" class="form-control" id="rg" placeholder="RG*" required>
-                            <small>* Apenas os números</small>
-                        </div>
-                        
-                        <div class="form-group grupoInput emailInput">
-                            <label for="email">E-mail*</label>
-                            <input type="email" class="form-control" id="email" aria-label="Email" placeholder="nome@exemplo.com" required>
-                        </div>
-
+                    <div class="form-group grupoInput nomeInput">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" class="form-control" id="nome" aria-label="Nome completo" placeholder="João Santos" required>
+                    </div>
+                    
+                    <div class="form-group grupoInput rgInput">
+                        <label for="rg">RG*</label>
+                        <input type="number" class="form-control" id="rg" placeholder="RG*" required>
+                        <small>* Apenas os números</small>
+                    </div>
+                    
+                    <div class="form-group grupoInput emailInput">
+                        <label for="email">E-mail*</label>
+                        <input type="email" class="form-control" id="email" aria-label="Email" placeholder="nome@exemplo.com" required>
                     </div>
                     
                     <div class="form-group grupoInput">
                         <label for="senha">Senha*</label>
                         <input type="password" class="form-control" id="senha" placeholder="***" required>
-                        <small>* Minimo de 8 caracteres e um especial (!@#$%^&*)</small>
+                        <small>*Minimo de 8 digitos e um especial (!@#$%^&*)</small>
                     </div>
                     
                     <div class="form-group grupoInput">
@@ -81,44 +77,35 @@
                     
                     <legend class="legendaFieldset">Endereço</legend>
 
-                    
-                    <div class="grupoInputCep d-flex">
-
-                        <div class="cepInput grupoInput">
-                            <label for="cep">CEP*</label>
-                            <input type="number" class="form-control" id="cep" aria-label="CEP" placeholder="00000-000" required>
-                            <small>* Apenas os números</small>
-                        </div>
-
-                        <div class="cidadeInput grupoInput">
-                            <label for="cidade">Cidade</label>
-                            <input type="text" class="form-control" id="cidade" placeholder="**" aria-label="Cidade" required disabled>
-                        </div>
-                        
-                        <div class="ufInput grupoInput">
-                            <label for="cidade">UF</label>
-                            <input type="text"  class="form-control" id="estado" placeholder="**" aria-label="Estado" required disabled >
-                        </div>
-
+                    <div class="cepInput grupoInput">
+                        <label for="cep">CEP*</label>
+                        <input type="number" class="form-control" id="cep" aria-label="CEP" placeholder="00000-000" required>
+                        <small>* Apenas os números</small>
                     </div>
 
-                    <div class="grupoInputBairro d-flex">
+                    <div class="cidadeInput grupoInput">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" placeholder="**" aria-label="Cidade" required disabled>
+                    </div>
+                    
+                    <div class="ufInput grupoInput">
+                        <label for="cidade">UF</label>
+                        <input type="text"  class="form-control" id="estado" placeholder="**" aria-label="Estado" required disabled >
+                    </div>
 
-                        <div class="bairroInput grupoInput">
-                            <label for="bairro">Bairro</label>
-                            <input type="text" class="form-control" id="bairro" placeholder="**" aria-label="Bairro" required disabled>
-                        </div>
-                        
-                        <div class="ruaInput grupoInput">
-                            <label for="rua">Rua</label>
-                            <input type="text" class="form-control" id="rua" placeholder="**" aria-label="Rua" required disabled>
-                        </div>
-                        
-                        <div class="numeroInput grupoInput">
-                            <label for="numero">Número*</label>
-                            <input type="number" class="form-control" id="numero" placeholder="123" aria-label="Número" required>
-                        </div>
-
+                    <div class="bairroInput grupoInput">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" placeholder="**" aria-label="Bairro" required disabled>
+                    </div>
+                    
+                    <div class="ruaInput grupoInput">
+                        <label for="rua">Rua</label>
+                        <input type="text" class="form-control" id="rua" placeholder="**" aria-label="Rua" required disabled>
+                    </div>
+                    
+                    <div class="numeroInput grupoInput">
+                        <label for="numero">Número*</label>
+                        <input type="number" class="form-control" id="numero" placeholder="123" aria-label="Número" required>
                     </div>
 
                     <div class="form-group grupoInput w-100">
@@ -132,7 +119,7 @@
             </div>
             <!-- Fim da Div para agrupar os fieldset, usado na responsividade -->
 
-            <button class="btn btn-primary" type="submit">Cadastrar</button>
+            <button class="btn btn-primary botaoCadastro" type="submit">Cadastrar</button>
 
         </form>
 
