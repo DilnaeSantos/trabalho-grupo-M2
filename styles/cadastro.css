@@ -21,7 +21,6 @@ main{
 .dadosIdentificacao, .dadosEndereco{
     padding: .5rem;
     width: 100%;
-    flex-direction: column;
 }
 
 /* linha em baixo das legendas do fieldset */
@@ -32,27 +31,14 @@ main{
 /* Definição geral para os grupo de input */
 .grupoInput{
     padding-bottom: 1rem;
+    width: 100%;
 }
 .grupoInput > small{
     font-weight: lighter;
     font-size: x-small;
 }
 
-/* definição dos input cep, cidade e uf */
-.grupoInputNome{
-    flex-wrap: wrap;
-}
-.nomeInput, .rgInput, .emailInput{
-    width: 100%;
-}
-
-/* definição dos input cep, cidade e uf */
-.grupoInputCep{
-    flex-wrap: wrap;
-}
-.cepInput{
-    width: 100%;
-}
+/* definição dos input cidade e uf */
 .cidadeInput{
     width: 70%;
     padding-right: .2rem;
@@ -62,25 +48,54 @@ main{
     padding-left: .2rem;
 }
 
-/* definição dos input bairro, rua e numero */
-.grupoInputBairro{
-    flex-wrap: wrap;
+/* estilo para o botão de cadastro */
+.botaoCadastro{
+    transition: .2s;
 }
-.bairroInput, .ruaInput, .numeroInput{
-    width: 100%;
+.botaoCadastro:hover{
+    scale: 1.05;
 }
 
 /* ---------------------------------------------------------- RESPONSIVIDADE DO  CADASTRO */
-
-/* 1920 x 1080.
-768 x 1024.
-Móvel: 360 x 720. */
+/* 1920 x 1080. 768 x 1024. Móvel: 360 x 720. */
 
 /* Telas maiores de 500px */
 @media (min-width: 500px) { 
     #formCadastro{
-        border: solid red;
         max-width: 500px;
+    }
+    .grupoFieldset{
+        padding: .5rem 1rem;
+    }
+    /* Definição geral para os grupo de input */
+    .grupoInput{
+        padding: .2rem .5rem;
+        width: 50%;
+    }
+
+    /* definição de largura dos input nome, rg e email */
+    .nomeInput{
+        width: 70%;
+    }
+    .rgInput{
+        width: 30%;
+    }
+    .emailInput{
+        width: 100%;
+    }
+
+    /* definição de largura dos input de endereço*/
+    .cepInput{
+        width: 30%;
+    }
+    .cidadeInput{
+        width: 70%;
+    }
+    .bairroInput, .ruaInput{
+        width: 80%;
+    }
+    .ufInput, .numeroInput{
+        width: 20%;
     }
 }
 
@@ -89,29 +104,8 @@ Móvel: 360 x 720. */
     #formCadastro{
         max-width: 900px;
     }
-    .grupoFieldset{
-        display: flex;
-        flex-wrap: wrap;
-        padding: .5rem 1rem;
-        /* width: 95%; */
-    }
-    .dadosIdentificacao, .dadosEndereco{
-        padding: .5rem;
-        display: flex;
-        flex-direction: row;
-        /* flex-wrap: wrap; */
-    }
-
-    /* Definição geral para os grupo de input */
-    .grupoInput{
-        padding: .2rem .5rem;
-        width: 50%;
-    }
-
-    /* definição dos input cep, cidade e uf */
-    .grupoInputNome{
-        width: 100%;
-    }
+    
+    /* definição de largura dos input nome, rg e email */
     .nomeInput{
         width: 40%;
     }
@@ -122,11 +116,7 @@ Móvel: 360 x 720. */
         width: 40%;
     }
 
-    /* definição dos input cep, cidade e uf */
-    /* definição dos input bairro, rua e numero */
-    .grupoInputCep, .grupoInputBairro{
-        width: 100%;
-    }
+    /* definição de largura dos input de endereço*/
     .cepInput, .bairroInput{
         width: 30%;
     }
@@ -136,7 +126,6 @@ Móvel: 360 x 720. */
     .ufInput, .numeroInput{
         width: 20%;
     }
-
-
-
 }
+
+
