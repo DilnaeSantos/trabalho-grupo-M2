@@ -31,6 +31,7 @@ body{
 label {
     display: flex;
     margin-top: 25px;
+    color: black;
   }
 
 /* caixinha de saída do form */
