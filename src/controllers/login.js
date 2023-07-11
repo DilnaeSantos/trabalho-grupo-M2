@@ -54,4 +54,3 @@ class LoginForm {
       loginForm.senha = document.getElementById('senha').value;
       loginForm.submeterFormulario();
   });
-  
