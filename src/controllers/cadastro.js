@@ -10,7 +10,7 @@ function preencherCampos(){
     var numero = document.getElementById('numero');
 
     nome.value = `Creusa Aparecida`;
-    rg.value = `12.378.946-6`;
+    rg.value = `123789466`;
     email.value = `Creusinha@hotmail.com`;
     senha.value = `Senh4uWu#`;
     senhaConfirma.value = `Senh4uWu#`;
@@ -29,7 +29,6 @@ function mudarCorNormal(campo){
 // ====================================================== FUNÇÕES DE VALIDAÇÃO DOS DADOS PESSOAIS
 
 function validarNome(nome) {
-    // console.log("foi - nome " + nome.value); // só para ver se entrou na função
     var auxiliar = nome.value.indexOf(' '); // vendo se tem o caractere espaço apenas
     if (auxiliar > 1 && nome.value.length > 7) { // se o espaço tiver no "meio" e o nome for maior q 7
         mudarCorNormal(nome);
@@ -41,8 +40,6 @@ function validarNome(nome) {
 }
 
 function validarRg(rg) {
-    // console.log("foi - rg " + rg); // só para ver se entrou na função
-    
     if (rg.value.length === 9) {
         mudarCorNormal(rg);
         return true;
@@ -50,27 +47,20 @@ function validarRg(rg) {
         mudarCorErro(rg);
         return false;
     }
-    console.log("padrao considerado : 12.345.678-9");
 }
 
 function validarEmail(email) {
-    // console.log("foi - email " + email); // só para ver se entrou na função
-    
     var atPos = email.value.indexOf('@');
     if (atPos < 4 || email.value.length - atPos - 1 < 8) {
-        console.log('Email inválido!');
         mudarCorErro(email);
         return false;
     } else {
-        console.log("email ok");
         mudarCorNormal(email);
         return true;
     }
 }
 
 function validarSenha(senha) {
-    // console.log("foi - senha " + senha); // só para ver se entrou na função
-    
     var specialChars = '!@#$%^&*';
     var auxiliar = false;
     for (var i = 0; i < senha.value.length; i++) {
@@ -80,28 +70,22 @@ function validarSenha(senha) {
     }
 
     if ( auxiliar && senha.value.length > 8 && senha.value.length < 13) {
-        console.log("deu certo a senha");
         mudarCorNormal(senha);
         return true;
     } else {
-        console.log('Senha inválida! A senha deve ter de 8 a 13 caracteres e pelo menos um caractere especial.');
         mudarCorErro(senha);
         return false;
     }
 }
 
 function validarConfirmaSenha(confirma) {
-    // console.log("foi - confirma " + confirma);
     
     let senha = document.getElementById('senha').value;
-    // console.log("foi - senha " + senha);
 
     if (senha === confirma.value) {
-        console.log('senha confirmada');
         mudarCorNormal(confirma);
         return true;
     } else {
-        console.log('senha diferente');
         mudarCorErro(confirma);
         return false;
     }
@@ -111,27 +95,24 @@ function validarConfirmaSenha(confirma) {
 
 function validarCep(cep){
     
-    const estado = document.getElementById('estado');
-    const cidade = document.getElementById('cidade');
-    const bairro = document.getElementById('bairro');
-    const rua = document.getElementById('rua');
+    const form = document.getElementById('formCadastro');
 
-    estado.value = ``;
-    cidade.value = ``;
-    bairro.value = ``;
-    rua.value = ``;
+    // limpando os campos a cada mudança do cep
+    form.estado.value = ``;
+    form.cidade.value = ``;
+    form.bairro.value = ``;
+    form.rua.value = ``;
     
     var req = new XMLHttpRequest()
     req.open("GET", `https://viacep.com.br/ws/${cep.value}/json/`);
     req.onload = function(){
-        console.log(req.status);
         if(req.status === 200){
             resObj = JSON.parse(req.responseText);
 
-            estado.value = resObj.uf;
-            cidade.value = resObj.localidade;
-            bairro.value = resObj.bairro;
-            rua.value = resObj.logradouro;
+            form.estado.value = resObj.uf;
+            form.cidade.value = resObj.localidade;
+            form.bairro.value = resObj.bairro;
+            form.rua.value = resObj.logradouro;
         } else {
             alert("Cep invalido");
         }
@@ -144,10 +125,10 @@ function validarCep(cep){
 function validarFormulario(form){
 
     if(validarNome(form.nome) && validarRg(form.rg) && validarEmail(form.email) && validarSenha(form.senha) && validarConfirmaSenha(form.senhaConfirma)){
-        alert(form.nome.value + ' está na lista de espera');
+        alert(form.nome.value + ' está na lista de espera!\nEntraremos em contato pelo email: ' + form.email.value);
         return true;
     } else {
-        alert("deu ruim");
+        alert("Formulário não validadado!\nVerifique se os campos cumprem os requisitos");
         return false;
     }
 }
