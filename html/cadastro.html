@@ -18,8 +18,7 @@
     <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas -->
     <header class="cabecalho">
         <div class="designFundoLogo">
-            <a href="../index.html" class="linkLogoCorvo"><img src="../styles/imagens/logo-corvo.png" alt="logoCorvo"
-                    class="imgLogo"></a>
+            <a href="../index.html" class="linkLogoCorvo"><img src="../styles/imagens/logo-corvo.png" alt="logoCorvo" class="imgLogo"></a>
         </div>
         <h1>MUNIN LÆRETID</h1>
         <nav class="menuNavegacao">
@@ -30,40 +29,103 @@
 
 
     <!-- Parte principal da página de cadastro -->
-    <main class="bg-black text-white d-flex flex-column justify-content-center align-items-center p-2">
-        <h2>Página de cadastro</h2>
-        <form class="d-flex flex-column justify-content-center align-items-center" id="formCadastro">
-            <fieldset class="d-flex flex-wrap justify-content-center align-items-start p-2 w-200">
+    <main class="d-flex flex-column justify-content-start align-items-center">
+
+        <form class="d-flex flex-column justify-content-start align-items-center" id="formCadastro">
+            
+            <!-- Div para agrupar os fieldset, usado na responsividade -->
+            <div class="grupoFieldset d-flex justify-content-around align-items-start">
                 
                 <!-- Dados de identificação do usuário -->
-                <div class="dadosIdentificacao d-flex flex-column flex-nowrap p-2">
-                    <h4>Dados pessoais</h4> 
-                    <input type="text" name="nome" id="nome" placeholder="Nome Completo*" aria-label="Campo para o nome completo" required>
-                    <input type="text" name="rg" id="rg" placeholder="RG*" aria-label="Campo para o RG" required>
-                    <input type="email" name="email" id="email" placeholder="E-mail*" aria-label="Campo para o email" required>
-                    <input type="password" name="senha" id="senha" placeholder="Senha*" aria-label="Campo para a senha" required>
-                    <input type="password" name="senhaConfirma" id="senhaConfirma" placeholder="Confirme a senha*" aria-label="Campo para a confirmação de senha" required>
-                </div>
+                <fieldset class="d-flex flex-wrap dadosIdentificacao">
+
+                    <legend class="legendaFieldset">Dados pessoais</legend> 
+
+                    <div class="form-group grupoInput nomeInput">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    
+                    <div class="form-group grupoInput rgInput">
+                        <label for="rg">RG*</label>
+                        <input type="number" class="form-control" id="rg" required>
+                        <small>* Apenas os números</small>
+                    </div>
+                    
+                    <div class="form-group grupoInput emailInput">
+                        <label for="email">E-mail*</label>
+                        <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
+                    </div>
+                    
+                    <div class="form-group grupoInput">
+                        <label for="senha">Senha*</label>
+                        <input type="password" class="form-control" id="senha" required>
+                        <small>*Minimo de 8 digitos e um especial (!@#$%^&*)</small>
+                    </div>
+                    
+                    <div class="form-group grupoInput">
+                        <label for="senhaConfirma">"Confirmação de senha*</label>
+                        <input type="password" class="form-control" id="senhaConfirma" required>
+                        <small>* Digite novamente a senha</small>
+                    </div>
+                
+                </fieldset>
+                <!-- Fim para o Dados de identificação do usuário -->
 
                 <!-- Endereço do usuário -->
-                <div class="dadosEndereco d-flex flex-column flex-nowrap p-2">
-                    <h4>Endereço</h4>
-                    <input type="number" name="cep" id="cep" placeholder="CEP*" aria-label="Campo para o CEP" required>
-                    <input type="text" name="estado" id="estado" placeholder="Estado" aria-label="Estado conforme o cep digitado" required disabled >
-                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" aria-label="Cidade conforme o cep digitado" required disabled>
-                    <input type="text" name="bairro" id="bairro" placeholder="Bairro" aria-label="Bairro conforme o cep digitado" required disabled>
-                    <input type="text" name="rua" id="rua" placeholder="Rua" aria-label="Rua conforme o cep digitado" required disabled>
-                    <input type="number" name="numero" id="numero" placeholder="Número*" aria-label="Campo para o numero de endereço" required>
-                    <input type="text" name="complemento" id="complemento" placeholder="Complemento" aria-label="Campo para complemento de endereço">
-                </div>
+                <fieldset class="d-flex flex-wrap dadosEndereco">
+                    
+                    <legend class="legendaFieldset">Endereço</legend>
 
-            </fieldset>
-            <button class="btn btn-primary" type="submit">Cadastrar</button>
+                    <div class="cepInput grupoInput">
+                        <label for="cep">CEP*</label>
+                        <input type="number" class="form-control" id="cep" placeholder="00000-000" required>
+                        <small>* Apenas os números</small>
+                    </div>
+
+                    <div class="cidadeInput grupoInput">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" required disabled>
+                    </div>
+                    
+                    <div class="ufInput grupoInput">
+                        <label for="cidade">UF</label>
+                        <input type="text"  class="form-control" id="estado" required disabled >
+                    </div>
+
+                    <div class="bairroInput grupoInput">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" required disabled>
+                    </div>
+                    
+                    <div class="ruaInput grupoInput">
+                        <label for="rua">Rua</label>
+                        <input type="text" class="form-control" id="rua" required disabled>
+                    </div>
+                    
+                    <div class="numeroInput grupoInput">
+                        <label for="numero">Número*</label>
+                        <input type="number" class="form-control" id="numero" required>
+                    </div>
+
+                    <div class="form-group grupoInput w-100">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento">
+                    </div>
+
+                </fieldset>
+                <!-- Fim do Endereço do usuário -->
+
+            </div>
+            <!-- Fim da Div para agrupar os fieldset, usado na responsividade -->
+
+            <button class="btn btn-primary botaoCadastro" type="submit">Cadastrar</button>
+
         </form>
-      <h2>pagina de cadastro</h2>
+
     </main>
 
-    <!-- Rodape com imagens de paginas de redes sociais -->
+    <!-- Rodape com bandeira da noruega -->
     <footer>
         <img src="../styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
         <p class="textoDoRodape">&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
