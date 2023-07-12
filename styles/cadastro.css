@@ -11,7 +11,7 @@ body {
 /* definindo a cor de fundo em preto e a cor das letras em um tom mais suave do branco */
 main{
     background-image: url("../styles/imagens/auroraboreal.jpg");
-    background-size: cover;
+    background-size: 100%;
     color: #eee;
     flex-grow: 1;
 }
