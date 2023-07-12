@@ -169,9 +169,8 @@ h2 {
 #accordion {
     position: relative;
     z-index: 4;
-    margin-top: -520px;
-    width: 422px;
-    height: 150px;
+    margin-top: -33.5%;
+    width: 30%;
     margin-left: 66%;
 }
 
