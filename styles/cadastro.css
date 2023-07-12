@@ -1,8 +1,18 @@
+
+/* ---------------------------------------------------------- BODY DO CADASTRO */
+body {
+    display: flex;
+    flex-direction: column;
+    /* definindo o minino de tela para sempre ter conteúdo na tela */
+    min-height: 100vh;
+}
+
 /* ---------------------------------------------------------- MAIN DO CADASTRO */
 /* definindo a cor de fundo em preto e a cor das letras em um tom mais suave do branco */
 main{
     background-color: #000;
     color: #eee;
+    flex-grow: 1;
 }
 
 #formCadastro{
