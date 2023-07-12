@@ -208,6 +208,7 @@ footer img {
 }
 
 footer p {
+    position: relative;
     color: white;
     font-style: bold;
     align-items: center;
