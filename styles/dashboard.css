@@ -1,47 +1,141 @@
-@import"./reset.css";
+/* Estilos para tornar o site responsivo */
 
-/* estilizaçao para ficar responsivo */
-@media(max-width: 100px) {
+/* Ajusta o tamanho do cabeçalho e do logotipo para telas menores */
+@media (max-width: 768px) {
     header {
-        width: 100px;
+      height: 8vw;
     }
-}
-
-/* Estilos para telas menores */
-@media (max-width: 767px) {
-    /* Ajuste o tamanho do cabeçalho e do logotipo para telas menores */
-    header {
-      height: 50px;
-    }
+  
     header img {
-      height: 40px;
+      height: 6vw;
+      margin-left: 1.5vw;
+      margin-top: 0.6vw;
     }
-    
-    /* Ajuste o posicionamento do título */
+  
     h2 {
-      margin-left: 10%;
-      margin-top: -250px;
+      margin-left: 2.5vw;
+      margin-top: -22vw;
+      font-size: 4vw;
     }
   
-    /* Ajuste a largura e a margem esquerda do menu de navegação */
     nav {
-      margin-left: 10%;
-    }
-    
-    /* Ajuste o tamanho dos botões de navegação */
-    #button2, #button3, #button4 {
-      width: 80px;
+      margin-left: 2.5vw;
+      margin-top: -2.5vw;
     }
   
-    /* Ajuste o tamanho e o posicionamento dos ícones de acesso */
+    #button2,
+    #button3,
+    #button4 {
+      width: 12vw;
+    }
+  
     #menuAcesso {
-      width: 80px;
-      margin-left: 5%;
+      width: 12vw;
+      margin-left: 1vw;
+      margin-top: 2vw;
     }
+  
     #menuAcesso img {
-      width: 40px;
+      width: 6vw;
     }
-}  
+  
+    .streetView {
+      margin-left: 2.5vw;
+      margin-top: -12vw;
+    }
+  
+    #accordion {
+      width: 90vw;
+      margin-left: 2.5vw;
+      margin-top: 4vw;
+    }
+  
+    .redesSociais {
+      width: 14vw;
+      margin-left: 72.5vw;
+      margin-top: 0.4vw;
+    }
+  
+    footer img {
+      height: 2.5vw;
+    }
+  
+    footer p {
+      margin-left: 30vw;
+      margin-top: -0.8vw;
+    }
+  }
+  
+  /* Ajustes adicionais para telas ainda menores */
+  @media (max-width: 479px) {
+    header {
+      height: 10vw;
+    }
+  
+    header img {
+      height: 8vw;
+      margin-left: 2vw;
+      margin-top: 0.6vw;
+    }
+  
+    h2 {
+      margin-left: 2.5vw;
+      margin-top: -16vw;
+      font-size: 3vw;
+    }
+  
+    nav {
+      margin-left: 2.5vw;
+      margin-top: -2.5vw;
+    }
+  
+    #button2,
+    #button3,
+    #button4 {
+      width: 15vw;
+    }
+  
+    #menuAcesso {
+      width: 15vw;
+      margin-left: 1vw;
+      margin-top: 2vw;
+    }
+  
+    #menuAcesso img {
+      width: 7.5vw;
+    }
+  
+    .streetView {
+      margin-left: 2.5vw;
+      margin-top: -8vw;
+    }
+  
+    #accordion {
+      width: 90vw;
+      margin-left: 2.5vw;
+      margin-top: 4vw;
+    }
+  
+    .redesSociais {
+      width: 18vw;
+      margin-left: 72.5vw;
+      margin-top: 0.4vw;
+    }
+  
+    footer img {
+      height: 2vw;
+    }
+  
+    footer p {
+      margin-left: 40vw;
+      margin-top: -0.8vw;
+    }
+  }
+  
+  /* Estilos restantes do CSS */
+  
+  /* ... Insira o restante do seu CSS aqui ... */
+    
 
 header {
     background-color: #002147;
@@ -64,8 +158,6 @@ h2 {
     color: white;
     font-style: bold;
 }
-
-
 
 .imagemFundo {
     max-width:100%;
