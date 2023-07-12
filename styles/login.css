@@ -1,0 +1,58 @@
+/* ----------- PÁGINA DE LOGIN ----------- */
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100Vh;
+}
+
+.formcontainer{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Alinhar horizontalmente ao centro */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    height: 25vh; /* Altura da janela de visualização */
+    margin-top: 10%;
+    font-size: 23%;
+    margin-bottom: 20%;
+}
+
+/* div do formulário */
+.form{
+    border: 1px solid #333333; /* Borda sólida verde */
+    background: #333333;
+    border-radius: 61px; /* Raio de curvatura de 10 pixels */
+    padding: 75px; /* Espaçamento interno */
+    margin-top: 35%;
+    font-size: 27px;
+}
+
+label {
+    display: flex;
+    margin-top: 25px;
+    color: black;
+  }
+
+/* caixinha de saída do form */
+.output {
+  font-size: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: center; /* Alinhar horizontalmente ao centro */
+    align-items: center; /* Alinhar verticalmente ao centro */
+}
+
+#submit{
+    width: 70%;
+    flex-shrink: 0;
+    background: #0033AD;
+    margin-top: 10%;
+}
+
+.linkRecuperaSenha{
+    color: #FFF;
+    font-size: 20px;
+}
