@@ -23,9 +23,8 @@
       margin-top: -2.5vw;
     }
   
-    #button2,
-    #button3,
-    #button4 {
+    #button2
+     {
       width: 12vw;
     }
   
@@ -64,7 +63,7 @@
       margin-left: 30vw;
       margin-top: -0.8vw;
     }
-  }
+}
   
   /* Ajustes adicionais para telas ainda menores */
   @media (max-width: 479px) {
@@ -89,9 +88,8 @@
       margin-top: -2.5vw;
     }
   
-    #button2,
-    #button3,
-    #button4 {
+    #button2
+     {
       width: 15vw;
     }
   
@@ -131,16 +129,11 @@
       margin-top: -0.8vw;
     }
   }
-  
-  /* Estilos restantes do CSS */
-  
-  /* ... Insira o restante do seu CSS aqui ... */
     
-
 header {
     background-color: #002147;
     width: 100%;
-    height: 60px;
+    height: 65px;
 }
 
 header img {
@@ -148,6 +141,8 @@ header img {
     width: auto;
     margin-left: 12px;
     margin-top: 3px;
+    -webkit-filter: drop-shadow(3px 3px 3px #ffffff);
+    filter: drop-shadow(2px 2px 2px #ffffff);
 }
 
 h2 {
@@ -190,11 +185,10 @@ footer {
 nav {
     display: flex;
     flex-direction: row;
-    margin-left: 65.5%;
+    margin-left: 90.5%;
     z-index: 0;
     margin-top: -45px;
 }
-
 
 #button1 {
     margin-right: 10px;
@@ -218,6 +212,8 @@ nav {
 }
 
 #button2 a {
+    box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);      
+    transition: 0.2s;
     text-decoration: none;
     color: white;
 }
@@ -231,7 +227,6 @@ nav {
     text-decoration: none;
     color: white;
 }
-
 
 #menuAcesso {
     display: flex;
@@ -267,6 +262,11 @@ nav {
     margin-bottom: 8px;
     border-radius: 0 0 4px 4px;
 } 
+
+#menuAcesso a:hover {
+  -webkit-filter: drop-shadow(3px 3px 3px #ffffff);
+    filter: drop-shadow(2px 2px 2px #ffffff);
+}
 
 .streetView {
     margin-left: 25%;
@@ -314,7 +314,11 @@ footer {
     position: absolute;
     margin-left: 88.5%;
     margin-top: -0.6%;
-
+}
+  
+.redesSociais img:hover {
+  -webkit-filter: drop-shadow(3px 3px 3px #ffffff);
+    filter: drop-shadow(2px 2px 2px #ffffff);
 }
 
 .instagramIcone {
