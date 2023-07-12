@@ -190,9 +190,40 @@ nav {
     margin-top: -45px;
 }
 
+#button1 {
+    margin-right: 10px;
+    margin-bottom: 0px;
+    width: 90px;
+    height: auto;
+    
+}
+
+#button2, #button3, #button4 {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    width: 90px;
+    height: auto;
+}
+
+#button1 a {
+        text-decoration: none;
+        color: white;
+}
+
 #button2 a {
     box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);      
     transition: 0.2s;
+    text-decoration: none;
+    color: white;
+}
+
+#button3 a {
+    text-decoration: none;
+    color: white;
+}
+
+#button4 a {
     text-decoration: none;
     color: white;
 }

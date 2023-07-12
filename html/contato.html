@@ -16,7 +16,7 @@
         <div class="designFundoLogo">
            <a href="../html/dashboard.html"><img src="../styles/imagens/logo-corvo.png" alt="logo do site, passáro corvo" class="imgLogo"></a>
         </div>
-        <h1>MUNIN  LÆRETID</h1>
+        <h1>Odin Skole</h1>
         <nav class="menuNavegacao">
             <a href="../html/dashboard.html" class="btn btn-outline-primary linkPaginaInicial">Voltar</a>
         </nav>
@@ -25,24 +25,27 @@
     <main>
         <section>
             <!-- Formulário de envio -->
-            <form action="" class="formularioDeEnvio">
+            <form action="https://api.staticforms.xyz/submit" method="post" class="formularioDeEnvio">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome" id="nome" required>
+                <input type="text" class="form-control" name="nome" placeholder="digite o seu nome" required>
 
                 <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" required>
+                <input type="email" name="email" class="form-control" placeholder="nome@exemplo.com" required>
 
-                <label for="msg">Mensagem</label>
-                <textarea name="msg" id="msg" cols="32" rows="5" required></textarea>
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" cols="32" rows="5" placeholder="digite uma mensagem" required></textarea>
 
-                <button class="btn btn-success">enviar</button>
+                <button type="submit" class="btn btn-success" id="enviarBtn">enviar</button>
+
+                <input type="hidden" name="accessKey" value="408a6f20-c2ce-4404-bb44-403bb34b549f">
+                <input type="hidden" name="redirectTo" value="https://dilnaesantos.github.io/trabaalho-grupo-M2/html/contato.html">
             </form>
         </section>
     </main>
     <!-- Rodapé -->
     <footer>
         <img src="../styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
-        <p class="textoDoRodape">&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
+        <p class="textoDoRodape">&copy; 2023 odin skole. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
