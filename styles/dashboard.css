@@ -7,6 +7,42 @@
     }
 }
 
+/* Estilos para telas menores */
+@media (max-width: 767px) {
+    /* Ajuste o tamanho do cabeçalho e do logotipo para telas menores */
+    header {
+      height: 50px;
+    }
+    header img {
+      height: 40px;
+    }
+    
+    /* Ajuste o posicionamento do título */
+    h2 {
+      margin-left: 10%;
+      margin-top: -250px;
+    }
+  
+    /* Ajuste a largura e a margem esquerda do menu de navegação */
+    nav {
+      margin-left: 10%;
+    }
+    
+    /* Ajuste o tamanho dos botões de navegação */
+    #button2, #button3, #button4 {
+      width: 80px;
+    }
+  
+    /* Ajuste o tamanho e o posicionamento dos ícones de acesso */
+    #menuAcesso {
+      width: 80px;
+      margin-left: 5%;
+    }
+    #menuAcesso img {
+      width: 40px;
+    }
+}  
+
 header {
     background-color: #002147;
     width: 100%;
