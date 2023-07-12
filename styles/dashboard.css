@@ -190,9 +190,10 @@ nav {
     margin-top: -45px;
 }
 
-#button2 a {
-    box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);      
-    transition: 0.2s;
+#button2  {
+  background-color: #ffffff;
+  box-shadow: 6px 6px 6px rgba(255, 255, 255, 0.5);      
+  transition: 0.2s;
     text-decoration: none;
     color: white;
 }
