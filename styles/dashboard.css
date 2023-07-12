@@ -199,6 +199,11 @@ footer {
     margin-right: 4px;
 }
 
+footer img {
+    height: 30px;
+    width: auto;
+}
+
 footer p {
     color: white;
     font-style: bold;
@@ -206,6 +211,7 @@ footer p {
     margin-left: 35%;
     margin-top: -4px;
 }
+
 
 .bandeiraNoruega {
     height: 30px;
