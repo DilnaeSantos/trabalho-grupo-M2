@@ -23,7 +23,7 @@
       margin-top: -2.5vw;
     }
   
-    #button2,
+    #button2
      {
       width: 12vw;
     }
@@ -63,7 +63,7 @@
       margin-left: 30vw;
       margin-top: -0.8vw;
     }
-  }
+}
   
   /* Ajustes adicionais para telas ainda menores */
   @media (max-width: 479px) {
@@ -88,7 +88,7 @@
       margin-top: -2.5vw;
     }
   
-    #button2,
+    #button2
      {
       width: 15vw;
     }
@@ -191,6 +191,8 @@ nav {
 }
 
 #button2 a {
+    box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);      
+    transition: 0.2s;
     text-decoration: none;
     color: white;
 }
@@ -287,7 +289,7 @@ footer {
   -webkit-filter: drop-shadow(3px 3px 3px #ffffff);
     filter: drop-shadow(2px 2px 2px #ffffff);
 }
-}
+
 .instagramIcone {
     color: black;
     margin-right: 4px;
