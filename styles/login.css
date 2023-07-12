@@ -1,5 +1,6 @@
 /* ----------- PÁGINA DE LOGIN ----------- */
 
+/* Configurações gerais do body */
 body{
     background-color: black;
     display: flex;
@@ -7,6 +8,7 @@ body{
     min-height: 100Vh;
 }
 
+/* Container do formulário */
 .formcontainer{
     flex-grow: 1;
     display: flex;
@@ -18,41 +20,65 @@ body{
     margin-bottom: 20%;
 }
 
-/* div do formulário */
+/* Estilização do formulário */
 .form{
-    border: 1px solid #333333; /* Borda sólida verde */
-    background: #333333;
+    border: 1px solid #152a63; /* Borda sólida verde */
+    background: #152a63;
     border-radius: 61px; /* Raio de curvatura de 10 pixels */
     padding: 75px; /* Espaçamento interno */
     margin-top: 35%;
     font-size: 27px;
 }
 
+/* Estilização das labels */
 label {
     display: flex;
     margin-top: 25px;
-    color: black;
-  }
+    color: white;
+}
 
-/* caixinha de saída do form */
+/* Estilização do campo de saída do formulário */
 .output {
   font-size: 20px;
 }
 
+/* Estilização do botão */
 .button{
     display: flex;
     justify-content: center; /* Alinhar horizontalmente ao centro */
     align-items: center; /* Alinhar verticalmente ao centro */
 }
 
-#submit{
+#submit {
     width: 70%;
     flex-shrink: 0;
     background: #0033AD;
+    border-radius: 10px;
     margin-top: 10%;
+    transition: background-color 0.3s ease; /* Transição suave de cor */
 }
 
+#submit:hover {
+    background-color: #0055FF; /* Nova cor ao passar o mouse */
+}
+
+/* Estilização do link de recuperação de senha */
 .linkRecuperaSenha{
     color: #FFF;
     font-size: 20px;
+}
+
+/* Media queries para tornar o CSS responsivo */
+@media (max-width: 768px) {
+    .formcontainer {
+        margin-top: 20%;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    #submit {
+        width: 90%;
+    }
 }
