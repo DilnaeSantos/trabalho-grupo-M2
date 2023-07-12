@@ -164,9 +164,19 @@ h2 {
 #accordion {
     position: relative;
     z-index: 4;
-    margin-top: -33.5%;
+    margin-top: -35%;
     width: 30%;
     margin-left: 66%;
+}
+
+.card-header .btn-link {
+  text-decoration: none;
+  color: white;
+  font-style: bold;
+}
+
+.card-header .btn-link p:hover {
+  color: rgb(174, 174, 185);
 }
 
 
@@ -190,28 +200,11 @@ nav {
     margin-top: -45px;
 }
 
-#button1 {
-    margin-right: 10px;
-    margin-bottom: 0px;
-    width: 90px;
-    height: auto;
-    
-}
 
-#button2, #button3, #button4 {
-    margin-left: 10px;
-    margin-right: 10px;
+#button2 {
     margin-bottom: 0;
     width: 90px;
     height: auto;
-}
-
-#button1 a {
-        text-decoration: none;
-        color: white;
-}
-
-#button2  {
   background-color: #ffffff;
   box-shadow: 6px 6px 6px rgba(255, 255, 255, 0.5);      
   transition: 0.2s;
@@ -219,14 +212,8 @@ nav {
     color: white;
 }
 
-#button3 a {
-    text-decoration: none;
-    color: white;
-}
-
-#button4 a {
-    text-decoration: none;
-    color: white;
+nav #button2 a {
+  text-decoration: none;
 }
 
 #menuAcesso {
