@@ -24,8 +24,7 @@
     }
   
     #button2,
-    #button3,
-    #button4 {
+     {
       width: 12vw;
     }
   
@@ -90,8 +89,7 @@
     }
   
     #button2,
-    #button3,
-    #button4 {
+     {
       width: 15vw;
     }
   
@@ -131,12 +129,7 @@
       margin-top: -0.8vw;
     }
   }
-  
-  /* Estilos restantes do CSS */
-  
-  /* ... Insira o restante do seu CSS aqui ... */
     
-
 header {
     background-color: #002147;
     width: 100%;
@@ -195,42 +188,11 @@ nav {
     margin-top: -45px;
 }
 
-
-#button1 {
-    margin-right: 10px;
-    margin-bottom: 0px;
-    width: 90px;
-    height: auto;
-
-}
-
-#button2, #button3, #button4 {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 0;
-    width: 90px;
-    height: auto;
-}
-
-#button1 a {
-        text-decoration: none;
-        color: white;
-}
-
 #button2 a {
     text-decoration: none;
     color: white;
 }
 
-#button3 a {
-    text-decoration: none;
-    color: white;
-}
-
-#button4 a {
-    text-decoration: none;
-    color: white;
-}
 #menuAcesso {
     display: flex;
     flex-direction: column;
