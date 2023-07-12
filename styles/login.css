@@ -35,10 +35,6 @@ label {
     color: white;
 }
 
-/* Estilização do campo de saída do formulário */
-.output {
-  font-size: 20px;
-}
 
 /* Estilização do botão */
 .button{
@@ -53,7 +49,7 @@ label {
     background: #0033AD;
     border-radius: 10px;
     margin-top: 10%;
-    transition: background-color 0.3s ease; /* Transição suave de cor */
+    transition: 0.3s ease; /* Transição suave de cor */
 }
 
 #submit:hover {
@@ -68,12 +64,19 @@ label {
 
 /* Media queries para tornar o CSS responsivo */
 @media (max-width: 768px) {
+    body{
+        min-height: 113Vh;
+    }
+    
     .formcontainer {
         margin-top: 0%;
     }
 
     .form {
         width: 90%;
+        padding: 40px; /* Espaçamento interno */
+        margin-top: 10%;
+        font-size: 15px;
     }
 
     #submit {
