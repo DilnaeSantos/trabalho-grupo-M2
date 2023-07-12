@@ -202,6 +202,7 @@ footer {
 footer img {
     height: 30px;
     width: auto;
+    margin-top: 2px;
 }
 
 footer p {
