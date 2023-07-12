@@ -1,47 +1,91 @@
-@import"./reset.css";
+/* Estilos para tornar o site responsivo */
 
-/* estilizaçao para ficar responsivo */
-@media(max-width: 100px) {
-    header {
-        width: 100px;
-    }
+/* Redefine o tamanho máximo da imagem de fundo */
+.imagemFundo {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -3;
 }
 
-/* Estilos para telas menores */
-@media (max-width: 767px) {
-    /* Ajuste o tamanho do cabeçalho e do logotipo para telas menores */
-    header {
-      height: 50px;
-    }
-    header img {
-      height: 40px;
-    }
-    
-    /* Ajuste o posicionamento do título */
-    h2 {
-      margin-left: 10%;
-      margin-top: -250px;
-    }
-  
-    /* Ajuste a largura e a margem esquerda do menu de navegação */
-    nav {
-      margin-left: 10%;
-    }
-    
-    /* Ajuste o tamanho dos botões de navegação */
-    #button2, #button3, #button4 {
-      width: 80px;
-    }
-  
-    /* Ajuste o tamanho e o posicionamento dos ícones de acesso */
-    #menuAcesso {
-      width: 80px;
-      margin-left: 5%;
-    }
-    #menuAcesso img {
-      width: 40px;
-    }
-}  
+/* Ajusta o tamanho e a margem do título */
+h2 {
+    margin-left: 10%;
+    margin-top: -250px;
+    z-index: -3;
+    color: white;
+    font-style: bold;
+    font-size: 24px;
+}
+
+/* Ajusta a largura do menu de navegação */
+nav {
+    width: 50%;
+    margin-left: 25%;
+    z-index: 0;
+    margin-top: -45px;
+}
+
+/* Ajusta o tamanho e a margem dos botões de navegação */
+#button2, #button3, #button4 {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* Ajusta o tamanho e a margem dos ícones de acesso */
+#menuAcesso {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+#menuAcesso img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+/* Ajusta a margem esquerda e superior da visualização da rua do Google Maps */
+.streetView {
+    margin-left: 10%;
+    margin-top: -200px;
+}
+
+/* Ajusta o tamanho e o posicionamento dos módulos do curso */
+#accordion {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+/* Ajusta o tamanho e a margem dos ícones de redes sociais no rodapé */
+.redesSociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: auto;
+    margin-left: 45%;
+    margin-top: 20px;
+}
+
+.redesSociais img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+/* Ajusta a margem esquerda e superior do texto do rodapé */
+footer p {
+    margin-left: 45%;
+    margin-top: 10px;
+    font-size: 12px;
+}
 
 header {
     background-color: #002147;
