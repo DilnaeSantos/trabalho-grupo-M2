@@ -12,7 +12,8 @@
 </head>
 
 <body class="inicio">
-    <!-- Essa vai ser a página home, página de apresentação da empresa -->
+    
+    <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas -->
     <header class="cabecalho">
         <div class="designFundoLogo">
             <a href="../index.html" class="linkLogoCorvo"><img src="../styles/imagens/logo-corvo.png" alt="logoCorvo"
@@ -25,7 +26,10 @@
         </nav>
     </header>
 
+    <!-- área principal da página -->
     <main class="formcontainer">
+        
+        <!-- formulário de login -->
         <section class="form-login">
             <form class="form">
                 <label for="usuario">Usuário:</label>
@@ -33,10 +37,13 @@
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required placeholder="Insira sua senha">
             
+                <!-- div do butão de submit -->
                 <div class="buttons">
                     <button id="submit" type="button">Login</button>
                 </div>
             </form>    
+
+            <!-- link para a página de recuperação de senha -->
             <p class="linkRecuperaSenha"><a href="../html/recuperaSenha.html">Esqueci minha senha.</a></p>
         </section>
     </main>        
@@ -47,6 +54,7 @@
         <p class="textoDoRodape">&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- script sendo chamado de forma assincrona -->
     <script src="../src/controllers/login.js" defer></script>
 </body>
 
