@@ -1,15 +1,14 @@
-# Projeto para um serviço de assinatura - Aulas de Noruegês
+# Plataforma para aulas de Noruegês
 
 Trabalho da Squad 06 para conclusão do Módulo 2 do Códigos do Amanhã
 
 ## 🚀 Começando
 
 Esse projeto simula uma plataforma onde é necessário assinatura para acessar um serviço.
-Escolhemos uma escola de idioma focado em norueguês.
 
-Pages do projeto: **[MUNIN](https://dilnaesantos.github.io/trabaalho-grupo-M2/index.html)**
+Escolhemos uma escola de idioma focado em norueguês, pois é um país com demanda de trabalhadores e incrível para o turismo.
 
-Figma do projeto: **[link](https://www.figma.com/file/gsY6PjVg2h69Df3gxhA7VW/Untitled?type=design&node-id=0%3A1&mode=design&t=e8eJtVkMPVXSy0J4-1)**
+Nisso a **Odin Skole** oferece um ensino personalizado para que o aluno consiga se comunicar em apenas 3 meses.
 
 ## 🛠️ Construído com
 
@@ -21,12 +20,8 @@ Figma do projeto: **[link](https://www.figma.com/file/gsY6PjVg2h69Df3gxhA7VW/Unt
 
 Os integrantes da squad e suas funções:
 
-* **Dilnae** - *Co-facilitador* - [Github]()
-* **Igor** - *Gestor de Gente e Engajamento* - [Github]()
-* **Juliane** - *Colaboradora 1* - [Github]()
-* **Malena** - *Gestora de Conhecimento* - [Github]()
-* **Wallace** - *Colaborador 2* - [Github]()
-<!-- 
----
-Feito com ❤️ por Squad 06
--->
+* **Dilnae** - *Co-facilitador* - [Github](https://github.com/DilnaeSantos)
+* **Igor** - *Gestor de Gente e Engajamento* - [Github](https://github.com/IgorSPinto)
+* **Juliane** - *Colaboradora I* - [Github](https://github.com/julianebueno)
+* **Malena** - *Gestora de Conhecimento* - [Github](https://github.com/Wallace-Lentes)
+* **Wallace** - *Colaborador II* - [Github](https://github.com/tsarinatsarina)
