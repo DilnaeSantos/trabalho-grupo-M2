@@ -27,13 +27,13 @@
             <!-- Formulário de envio -->
             <form action="https://api.staticforms.xyz/submit" method="post" class="formularioDeEnvio">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="nome" placeholder="digite o seu nome" required>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="digite o seu nome" required>
 
                 <label for="email">E-mail</label>
-                <input type="email" name="email" class="form-control" placeholder="nome@exemplo.com" required>
+                <input type="email" name="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
 
                 <label for="mensagem">Mensagem</label>
-                <textarea name="mensagem" cols="32" rows="5" placeholder="digite uma mensagem" required></textarea>
+                <textarea name="mensagem" cols="32" rows="5" id="msg" placeholder="digite uma mensagem" required></textarea>
 
                 <button type="submit" class="btn btn-success" id="enviarBtn">enviar</button>
 
