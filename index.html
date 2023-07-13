@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/detalhes.css">
-    <script src="./src/dash.js" defer></script>
+    <script src="./src/view/index.js" defer></script>
 
     <title>Home</title>
 </head>
@@ -23,7 +23,7 @@
             <a href="index.html" class="linkLogoCorvo"><img src="./styles/imagens/logo-corvo.png" alt="logoCorvo"
                     class="imgLogo"></a>
         </div>
-        <h1>MUNIN LÆRETID</h1>
+        <h1>ODIN SKOLE</h1>
         <nav class="menuNavegacao">
             <a href="./html/cadastro.html" class="btn btn-outline-primary linkPaginaInicial">Cadastro</a>
             <a href="./html/login.html" class="btn btn-outline-primary linkPaginaInicial">Login</a>
@@ -34,8 +34,9 @@
     <main>
         <h2>APRENDA NORUEGUÊS EM 3 MESES</h2>
         <div class="imgETextoInicial">
+            <!-- Sequencia de imagens de apresentação do pais -->
             <div class="streetView">
-                <img id="streetViewImage" src="" width="600" height="450" style="border-radius:4px 4px 0 0;">
+                <img id="streetViewImage" src="https://media.gettyimages.com/id/168505044/pt/foto/fiordes-da-noruega.jpg?s=612x612&w=0&k=20&c=lyJ5NRuHU3W-GzQQlZreeSD6PQt-zb313FDnQDvAL7I=" width="600" height="450" style="border-radius:4px 4px 0 0;">
             </div>
             <div class="textoApresentacao">
                 <p>A Munin tem um método de ensino mais avançado, entregando uma proficiência básica do norueguês em
@@ -55,7 +56,7 @@
         </div>
 
     <!-- Um botão para obter a promoção do mes e ser direcionado para novos alunos o cadastro. -->
-        <button class="botaoPromocao">Quero 20%OFF na matricula</button>
+    <a href="./html/cadastro.html"><button class="botaoPromocao">Quero 20%OFF na matricula</button> </a>
 
         <!-- Definição do plano básico para ser apresentado e contratado pelo estudante. -->
         <div class="planos">
@@ -76,9 +77,10 @@
             </div>
             <!-- Bloco que define o valor do plano e suas condições de pagamento. -->
             <div class="preco">
-                <p>A vista ou em até 10X</p>
-                <p>R$300BRL</p>
-                <button class="botaoPreco">Quero esse</button>
+                
+                    <p>A vista ou em até 10X</p>
+                    <p>R$300BRL</p>
+                    <a href="./html/cadastro.html"> <button class="botaoPreco">Quero esse</button></a>
             </div>
         </div>
 
@@ -102,11 +104,12 @@
                     clara em apresentações públicas.!</p>
             </div>           
              <!-- Bloco que define o valor do plano e suas condições de pagamento. -->
-            <div class="preco">
+             <div class="preco">
+                
                 <p>A vista ou em até 10X</p>
                 <p>R$300BRL</p>
-                <button class="botaoPreco">Quero esse</button>
-            </div>
+                <a href="./html/cadastro.html"> <button class="botaoPreco">Quero esse</button></a>
+        </div>
         </div>
 
         <!-- Definição do plano avançado para ser apresentado e contratado pelo estudante. -->
@@ -132,9 +135,10 @@
             </div>
          <!-- Bloco que define o valor do plano e suas condições de pagamento. -->
             <div class="preco">
-                <p>A vista ou em até 10X</p>
-                <p>R$300BRL</p>
-                <button class="botaoPreco">Quero esse</button>
+                
+                    <p>A vista ou em até 10X</p>
+                    <p>R$300BRL</p>
+                    <a href="./html/cadastro.html"><button class="botaoPreco">Quero esse</button></a>
             </div>
         </div>
 
@@ -148,3 +152,5 @@
 </body>
 
 </html>
+
+<a href="./html/cadastro.html"></a>

@@ -1,14 +1,152 @@
-/*@import"./reset.css";
+/* Estilos para tornar o site responsivo */
 
-/* estilizaçao para ficar responsivo */
-/*@media(max-width: 100px) {
+/* Ajusta o tamanho do cabeçalho e do logotipo para telas menores */
+@media (max-width: 768px) {
     header {
-        width: 100px;
+      height: 8vw;
     }
-}*/
+  
+    header img {
+      height: 6vw;
+      margin-left: 1.5vw;
+      margin-top: 0.6vw;
+    }
+  
+    h2 {
+      margin-left: 2.5vw;
+      margin-top: -22vw;
+      font-size: 4vw;
+    }
+  
+    nav {
+      margin-left: 2.5vw;
+      margin-top: -2.5vw;
+    }
+  
+    #button2
+     {
+      width: 12vw;
+    }
+  
+    #menuAcesso {
+      width: 12vw;
+      margin-left: 1vw;
+      margin-top: 2vw;
+    }
+  
+    #menuAcesso img {
+      width: 6vw;
+    }
+  
+    .streetView {
+      margin-left: 2.5vw;
+      margin-top: -12vw;
+    }
+  
+    #accordion {
+      width: 90vw;
+      margin-left: 2.5vw;
+      margin-top: 4vw;
+    }
+  
+    .redesSociais {
+      width: 14vw;
+      margin-left: 72.5vw;
+      margin-top: 0.4vw;
+    }
+  
+    footer img {
+      height: 2.5vw;
+    }
+  
+    footer p {
+      margin-left: 30vw;
+      margin-top: -0.8vw;
+    }
+}
+  
+  /* Ajustes adicionais para telas ainda menores */
+  @media (max-width: 479px) {
+    header {
+      height: 10vw;
+    }
+  
+    header img {
+      height: 8vw;
+      margin-left: 2vw;
+      margin-top: 0.6vw;
+    }
+  
+    h2 {
+      margin-left: 2.5vw;
+      margin-top: -16vw;
+      font-size: 3vw;
+    }
+  
+    nav {
+      margin-left: 2.5vw;
+      margin-top: -2.5vw;
+    }
+  
+    #button2
+     {
+      width: 15vw;
+    }
+  
+    #menuAcesso {
+      width: 15vw;
+      margin-left: 1vw;
+      margin-top: 2vw;
+    }
+  
+    #menuAcesso img {
+      width: 7.5vw;
+    }
+  
+    .streetView {
+      margin-left: 2.5vw;
+      margin-top: -8vw;
+    }
+  
+    #accordion {
+      width: 90vw;
+      margin-left: 2.5vw;
+      margin-top: 4vw;
+    }
+  
+    .redesSociais {
+      width: 18vw;
+      margin-left: 72.5vw;
+      margin-top: 0.4vw;
+    }
+  
+    footer img {
+      height: 2vw;
+    }
+  
+    footer p {
+      margin-left: 40vw;
+      margin-top: -0.8vw;
+    }
+  }
 
-body{
-    background-color: rgb(107, 101, 101);
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+    
+header {
+    background-color: #002147;
+    width: 100%;
+    height: 65px;
+}
+
+header img {
+    height: 55px;
+    width: auto;
+    margin-left: 12px;
+    margin-top: 3px;
+    -webkit-filter: drop-shadow(3px 3px 3px #ffffff);
+    filter: drop-shadow(2px 2px 2px #ffffff);
 }
 
 h2 {
@@ -16,20 +154,79 @@ h2 {
     margin-left: 25%;
     margin-top: -325px;
     z-index: -3;
+    color: white;
+    font-style: bold;
+}
+
+.imagemFundo {
+    max-width:100%;
+    height:auto;
+    position: absolute;
+    z-index: -3;
+}
+
+#accordion {
+    position: relative;
+    z-index: 4;
+    margin-top: -35%;
+    width: 30%;
+    margin-left: 66%;
+}
+
+.card-header .btn-link {
+  text-decoration: none;
+  color: white;
+  font-style: bold;
+}
+
+.card-header .btn-link p:hover {
+  color: rgb(174, 174, 185);
 }
 
 
-#accordion {
-    margin-right: 5%;
-    margin-left: 60%;
-    margin-bottom: 10%;
+footer {
+    display: flex;
+    left: 0;
+    bottom: 0;
+    margin-top: 35%;
+    padding-top: 12px;
+    width: 100%;
+    height: 24%;
+    background-color: #002147 ;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: 89.5%;
+    z-index: 0;
+    margin-top: -45px;
+}
+
+
+#button2 {
+    margin-bottom: 0;
+    width: 90px;
+    height: auto;
+  background-color: #ffffff;
+  box-shadow: 6px 6px 6px rgba(255, 255, 255, 0.5);      
+  transition: 0.2s;
+    text-decoration: none;
+    color: white;
+}
+
+nav #button2 a {
+  text-decoration: none;
 }
 
 #menuAcesso {
     display: flex;
     flex-direction: column;
     width: 100px;
-    margin-left: 2%;
+    height: auto;
+    padding-top: 2%;
+    margin-left: 17%;
     z-index: 1;
 }
 
@@ -37,7 +234,6 @@ h2 {
     width: 50px;
     height: auto;
     z-index: 2;
-    
 }
 
 .iconeTools, .iconeAvisos, .iconeNotas {
@@ -59,6 +255,11 @@ h2 {
     border-radius: 0 0 4px 4px;
 } 
 
+#menuAcesso a:hover {
+  -webkit-filter: drop-shadow(3px 3px 3px #ffffff);
+    filter: drop-shadow(2px 2px 2px #ffffff);
+}
+
 .streetView {
     margin-left: 25%;
     margin-top: -255px;
@@ -67,6 +268,81 @@ h2 {
 
 .card1, .card2, .card3, .card4, .card5, .card6 {
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.48;
 }
 
+.card1 {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.card6 {
+    border-radius: 0px 0px 4px 4px;
+}
+
+.card1, .card2, .card3, .card4 p {
+    color: white;
+    font-style: bold;
+}
+
+.card5, .card6 p{
+    color: rgb(238, 226, 226);
+    font-style: bold;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    margin-top: 287px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+.redesSociais {
+    width: 125px;
+    height: 60px;
+    position: absolute;
+    margin-left: 88.5%;
+    margin-top: -0.6%;
+}
+  
+.redesSociais img:hover {
+  -webkit-filter: drop-shadow(3px 3px 3px #ffffff);
+    filter: drop-shadow(2px 2px 2px #ffffff);
+}
+
+.instagramIcone {
+    color: black;
+    margin-right: 4px;
+}
+
+.faceIcon, .whatsIcon {
+    color: black;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+footer img {
+    height: 30px;
+    width: auto;
+    margin-top: 2px;
+}
+
+footer p {
+    position: relative;
+    color: white;
+    font-style: bold;
+    align-items: center;
+    margin-left: 35%;
+    margin-top: -4px;
+}
+
+
+.bandeiraNoruega {
+    height: 30px;
+    width: auto;
+    margin-top: -8px;
+    margin-left: 12px;
+}

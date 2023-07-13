@@ -1,58 +1,85 @@
 /* ----------- PÁGINA DE LOGIN ----------- */
 
+/* Configurações gerais do body */
 body{
-    background-color: black;
     display: flex;
     flex-direction: column;
-    min-height: 100Vh;
+    min-height: 101Vh;
 }
 
+/* Container do formulário */
 .formcontainer{
     flex-grow: 1;
     display: flex;
     justify-content: center; /* Alinhar horizontalmente ao centro */
     align-items: center; /* Alinhar verticalmente ao centro */
-    height: 25vh; /* Altura da janela de visualização */
-    margin-top: 10%;
+    overflow-y: auto;
     font-size: 23%;
-    margin-bottom: 20%;
+    background-color: black;
 }
 
-/* div do formulário */
+/* Estilização do formulário */
 .form{
-    border: 1px solid #333333; /* Borda sólida verde */
-    background: #333333;
+    border: 1px solid #152a63; /* Borda sólida verde */
+    background: #152a63;
     border-radius: 61px; /* Raio de curvatura de 10 pixels */
     padding: 75px; /* Espaçamento interno */
-    margin-top: 35%;
+    margin-top: 10%;
     font-size: 27px;
 }
 
+/* Estilização das labels */
 label {
     display: flex;
     margin-top: 25px;
-    color: black;
-  }
-
-/* caixinha de saída do form */
-.output {
-  font-size: 20px;
+    color: white;
 }
 
+
+/* Estilização do botão */
 .button{
     display: flex;
     justify-content: center; /* Alinhar horizontalmente ao centro */
     align-items: center; /* Alinhar verticalmente ao centro */
 }
 
-#submit{
+#submit {
     width: 70%;
     flex-shrink: 0;
     background: #0033AD;
+    border-radius: 10px;
     margin-top: 10%;
+    transition: 0.3s ease; /* Transição suave de cor */
 }
 
+#submit:hover {
+    background-color: #0055FF; /* Nova cor ao passar o mouse */
+}
+
+/* Estilização do link de recuperação de senha */
 .linkRecuperaSenha{
     color: #FFF;
     font-size: 20px;
+}
+
+/* Media queries para tornar o CSS responsivo */
+@media (max-width: 768px) {
+    body{
+        min-height: 113Vh;
+    }
+    
+    .formcontainer {
+        margin-top: 0%;
+    }
+
+    .form {
+        width: 90%;
+        padding: 40px; /* Espaçamento interno */
+        margin-top: 10%;
+        font-size: 15px;
+    }
+
+    #submit {
+        width: 90%;
+    }
 }

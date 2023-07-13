@@ -13,6 +13,7 @@
 
 <body class="inicio">
 
+    <!-- Cabeçalho composto com o logo da empresa e os links que chamam as paginas -->
     <header class="cabecalho">
         <div class="designFundoLogo">
             <a href="../index.html" class="linkLogoCorvo"><img src="../styles/imagens/logo-corvo.png" alt="logoCorvo"
@@ -25,12 +26,16 @@
         </nav>
     </header>
 
+    <!-- área principal da página -->
     <main class="formcontainer">
+
+        <!-- formulário de recuperação de senha -->
         <section class="form-login">
             <form class="form">
                 <label for="email">Email de Recuperação:</label>
                 <input type="text" id="email" name="email" required placeholder="Digite o email de recuperação">
             
+                <!-- div do butão de submit -->
                 <div class="buttons">
                     <button id="submit" type="button">Enviar Email</button>
                 </div>
@@ -38,12 +43,14 @@
         </section>
     </main>   
     
+    <!-- Rodape com imagens de paginas de redes sociais -->
     <footer>
         <img src="../styles/imagens/bandeira-noruega.png" alt="bandeira da noruega" class="imgBandeira">
         <p class="textoDoRodape">&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="../src/controllers/recuperaSenha.js"></script>
+    <!-- script sendo chamado de forma assincrona -->
+    <script src="../src/controllers/recuperaSenha.js" defer></script>
 </body>
 
 </html>
