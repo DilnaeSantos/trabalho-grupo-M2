@@ -30,6 +30,10 @@ body{
     font-size: 27px;
 }
 
+input {
+    border-radius: 25px;
+}
+
 /* Estilização das labels */
 label {
     display: flex;
