@@ -236,7 +236,7 @@ nav #button2 a {
     z-index: 2;
 }
 
-.iconeTools, .iconeAvisos, .iconeNotas {
+.iconeTools, .iconeAvisos, .iconeNotas {}
     margin-top: 8px;
     margin-bottom:  8px;
     z-index: 3;
