@@ -31,7 +31,7 @@ body{
 }
 
 input {
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 /* Estilização das labels */
@@ -63,10 +63,15 @@ label {
 }
 
 /* Estilização do link de recuperação de senha */
-.linkRecuperaSenha{
-    color: #FFF;
-    font-size: 20px;
-}
+    a {
+    color: #4b73d1; /* Altera a cor do texto do link */
+    font-size: 25px;
+  }
+  
+  a:hover {
+    color: #6680b4; /* Altera a cor do link ao passar o mouse sobre ele */
+  }
+  
 
 /* Media queries para tornar o CSS responsivo */
 @media (max-width: 768px) {
