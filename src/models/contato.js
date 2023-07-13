@@ -14,7 +14,7 @@ function comfirmação (event) {
     msgDeEnvio.textContent = 'E-mail enviado com sucesso'
     setTimeout(() => {
       document.querySelector('form').submit()
-    },3000)
+    },1060)
   }
 }
 
