@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /* Define o layout do corpo como uma coluna e ocupa o mínimo de altura disponível */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -52,4 +55,34 @@ textarea {
     width: 100%;
     height: 150px;
     resize: vertical;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+.equipe {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;  
+}
+
+.equipeContainer {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.LinkSociais {
+    text-decoration: none;
+    font-size: 90%;
+}
+
+.LinkSociais:hover {
+    font-size: 105%;
+    transition: 0.5s;
+    color: #0077ff;
 }
