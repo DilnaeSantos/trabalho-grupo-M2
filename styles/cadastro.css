@@ -14,6 +14,7 @@ main{
     background-size: cover;
     color: #eee;
     flex-grow: 1;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #formCadastro{
