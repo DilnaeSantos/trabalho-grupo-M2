@@ -23,6 +23,7 @@
     </header>
     <!-- Conteúdo principal -->
     <main>
+        <!-- sessão que tem as redes sociais da equipe -->
         <section class="equipe">
             <div class="equipeContainer">
                 <h3>Dilnae Rennan</h3>
@@ -52,6 +53,8 @@
         </section>
         <section>
             <!-- Formulário de envio -->
+            <!-- eu utilizei uma api para enviar o conteudo do form para o meu email -->
+            <!-- algumas class esta utilizando o comando do boostrap -->
             <form action="https://api.staticforms.xyz/submit" method="post" class="formularioDeEnvio">
                 <label for="nome">Nome</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="digite o seu nome" required>
@@ -60,10 +63,11 @@
                 <input type="email" name="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
 
                 <label for="mensagem">Mensagem</label>
-                <textarea name="mensagem" cols="32" rows="5" id="msg" placeholder="digite uma mensagem" required></textarea>
+                <textarea name="mensagem" class="form-control" cols="32" rows="5" id="msg" placeholder="digite uma mensagem" required></textarea>
 
-                <button type="submit" class="btn btn-success" id="enviarBtn">enviar</button>
+                <button type="submit" class="btn btn-light" id="enviarBtn">enviar</button>
 
+                <!-- esse dois input faz parte da api -->
                 <input type="hidden" name="accessKey" value="408a6f20-c2ce-4404-bb44-403bb34b549f">
                 <input type="hidden" name="redirectTo" value="https://dilnaesantos.github.io/trabaalho-grupo-M2/html/contato.html">
             </form>
