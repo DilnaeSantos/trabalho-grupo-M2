@@ -1,35 +1,15 @@
 
-// ====================================================== FUNÇÕES DE TESTES
-
-function preencherCampos(){
-    var nome = document.getElementById('nome');
-    var rg = document.getElementById('rg');
-    var email = document.getElementById('email');
-    var senha = document.getElementById('senha');
-    var senhaConfirma = document.getElementById('senhaConfirma');
-    var numero = document.getElementById('numero');
-
-    nome.value = `Creusa Aparecida`;
-    rg.value = `123789466`;
-    email.value = `Creusinha@hotmail.com`;
-    senha.value = `Senh4uWu#`;
-    senhaConfirma.value = `Senh4uWu#`;
-    numero.value = `810`;
-}
-
 // ====================================================== FUNÇÕES PARA MOSTRAR COR NOS ERROS
-
 function mudarCorErro(campo){
-    campo.style.background = "#FF6961";
+    campo.style.background = "#FFB6C1";
 }
 function mudarCorNormal(campo){
     campo.style.background = "#FFFFFF";
 }
 
 // ====================================================== FUNÇÕES DE VALIDAÇÃO DOS DADOS PESSOAIS
-
 function validarNome(nome) {
-    var auxiliar = nome.value.indexOf(' '); // vendo se tem o caractere espaço apenas
+    let auxiliar = nome.value.indexOf(' '); // vendo se tem o caractere espaço apenas
     if (auxiliar > 1 && nome.value.length > 7) { // se o espaço tiver no "meio" e o nome for maior q 7
         mudarCorNormal(nome);
         return true;
@@ -40,7 +20,7 @@ function validarNome(nome) {
 }
 
 function validarRg(rg) {
-    if (rg.value.length === 9) {
+    if (rg.value.length === 9) { // tamanho padrao em alguns estados
         mudarCorNormal(rg);
         return true;
     } else {
@@ -50,8 +30,8 @@ function validarRg(rg) {
 }
 
 function validarEmail(email) {
-    var atPos = email.value.indexOf('@');
-    if (atPos < 4 || email.value.length - atPos - 1 < 8) {
+    var atPos = email.value.indexOf('@'); // encontrando o index do arroba
+    if (atPos < 4 || email.value.length - atPos - 1 < 8) { // se apos o arroba não tem os caractere necessários
         mudarCorErro(email);
         return false;
     } else {
@@ -61,7 +41,7 @@ function validarEmail(email) {
 }
 
 function validarSenha(senha) {
-    var specialChars = '!@#$%^&*';
+    var specialChars = '!@#$%^&*'; // caracteres especiais aceitos
     var auxiliar = false;
     for (var i = 0; i < senha.value.length; i++) {
         if (specialChars.indexOf(senha.value.charAt(i)) > -1) {
@@ -69,7 +49,7 @@ function validarSenha(senha) {
         }
     }
 
-    if ( auxiliar && senha.value.length > 8 && senha.value.length < 13) {
+    if (auxiliar && senha.value.length > 8) { // se tem caractere especial e o tamanho maior q 8
         mudarCorNormal(senha);
         return true;
     } else {
@@ -79,9 +59,7 @@ function validarSenha(senha) {
 }
 
 function validarConfirmaSenha(confirma) {
-    
     let senha = document.getElementById('senha').value;
-
     if (senha === confirma.value) {
         mudarCorNormal(confirma);
         return true;
@@ -93,31 +71,69 @@ function validarConfirmaSenha(confirma) {
 
 // ====================================================== FUNÇÕES DE VALIDAÇÃO DO ENDEREÇO
 
-function validarCep(cep){
-    
-    const form = document.getElementById('formCadastro');
+// function validarCep(cep){
+//     const form = document.getElementById('formCadastro');
+//     if (cep.value)
+//     // limpando os campos a cada mudança do cep
+//     form.estado.value = ``;
+//     form.cidade.value = ``;
+//     form.bairro.value = ``;
+//     form.rua.value = ``;
+//     console.log(form.cep.value)
+//     console.log(cep.value)
+//     var req = new XMLHttpRequest()
+//     req.open("GET", `https://viacep.com.br/ws/${form.cep.value}/json/`);
+//     req.onload = function(){
+//         if(req.status === 200){
+//             resObj = JSON.parse(req.responseText);
 
-    // limpando os campos a cada mudança do cep
-    form.estado.value = ``;
+//             form.estado.value = resObj.uf;
+//             form.cidade.value = resObj.localidade;
+//             form.bairro.value = resObj.bairro;
+//             form.rua.value = resObj.logradouro;
+//         } else {
+//             // alert("Cep invalido");
+//             throw new Error("oops");
+//         }
+//     }
+//     req.send();
+// }
+
+function limparCamposEndereco(form){
+    // função para limpar os campos automaticos do endereço
     form.cidade.value = ``;
+    form.estado.value = ``;
     form.bairro.value = ``;
     form.rua.value = ``;
-    
-    var req = new XMLHttpRequest()
-    req.open("GET", `https://viacep.com.br/ws/${cep.value}/json/`);
-    req.onload = function(){
-        if(req.status === 200){
-            resObj = JSON.parse(req.responseText);
+}
 
-            form.estado.value = resObj.uf;
-            form.cidade.value = resObj.localidade;
-            form.bairro.value = resObj.bairro;
-            form.rua.value = resObj.logradouro;
-        } else {
-            alert("Cep invalido");
+function validarCep(form){
+    if (form.cep.value.length === 8) { // se o cep tiver o tamanho padrão de 8
+        var req = new XMLHttpRequest();
+        req.open("GET", `https://viacep.com.br/ws/${form.cep.value}/json/`);
+        req.onload = function(){
+            if(req.status === 200){ // se houver retorno da api
+                resObj = JSON.parse(req.responseText);
+                if (!resObj.erro) { // se o cep não retornou erro, ou seja, está com informações válidas
+                    mudarCorNormal(form.cep);
+                    form.cidade.value = resObj.localidade;
+                    form.estado.value = resObj.uf;
+                    form.bairro.value = resObj.bairro;
+                    form.rua.value = resObj.logradouro;
+                    return true;
+                } else {
+                    mudarCorErro(form.cep);
+                    throw new Error("Cep não encontrado...");
+                }
+            } else {
+                mudarCorErro(form.cep);
+                throw new Error("Cep não encontrado......");
+            }
         }
+        req.send();
+    } else {
+        mudarCorErro(form.cep);
     }
-    req.send();
 }
 
 // ====================================================== FUNÇÃO DE VALIDAÇÃO DO ENVIO DO FORMULARIO
@@ -135,34 +151,41 @@ function validarFormulario(form){
 
 // ====================================================== INICIO DOS EVENT LISTENERS
 
-document.getElementById('nome').addEventListener("change", function(event){
+document.getElementById('nome').addEventListener("keyup", function(event){
     event.preventDefault()
     validarNome(event.target)
 })
 
-document.getElementById('rg').addEventListener("change", function(event){
+document.getElementById('rg').addEventListener("keyup", function(event){
     event.preventDefault()
     validarRg(event.target)
 })
 
-document.getElementById('email').addEventListener("change", function(event){
+document.getElementById('email').addEventListener("keyup", function(event){
     event.preventDefault()
     validarEmail(event.target)
 })
 
-document.getElementById('senha').addEventListener("change", function(event){
+document.getElementById('senha').addEventListener("keyup", function(event){
     event.preventDefault()
     validarSenha(event.target)
 })
 
-document.getElementById('senhaConfirma').addEventListener("change", function(event){
+document.getElementById('senhaConfirma').addEventListener("keyup", function(event){
     event.preventDefault()
     validarConfirmaSenha(event.target)
 })
 
-document.getElementById('cep').addEventListener("change", function(event){
+document.getElementById('cep').addEventListener("keyup", function(event){
     event.preventDefault()
-    validarCep(event.target)
+    // limpando os campos a cada mudança do cep
+    limparCamposEndereco(event.view.document.getElementById('formCadastro'));
+    try {
+        validarCep(event.view.document.getElementById('formCadastro'));
+    } catch(e) {
+        console.log(e); 
+        console.error(e);
+    }
 })
 
 // ====================================================== ENVIO DO FORMULARIO PARA O CADASTRO
